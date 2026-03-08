@@ -23,32 +23,63 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Rohr-Blitz | Master Expert Plumbing Diagnosis & Repair',
+  metadataBase: new URL('https://rohr-blitz.de'),
+  title: {
+    default: 'Rohr-Blitz | Master Expert Plumbing Diagnosis & Repair',
+    template: '%s | Rohr-Blitz'
+  },
   description: 'Experience the future of home maintenance. Instant visual diagnosis, 24/7 premium emergency service, and transparent estimates in seconds with Rohr-Blitz Master Technicians.',
   keywords: ['plumbing', 'master diagnosis', 'emergency plumber', 'Germany', 'home repair', 'Rohr-Blitz', 'leak detection', 'clogged drain repair', 'pipe burst service', 'Meisterbetrieb'],
-  authors: [{ name: 'Rohr-Blitz' }],
+  authors: [{ name: 'Rohr-Blitz Engineering' }],
+  creator: 'Rohr-Blitz Engineering',
+  publisher: 'Rohr-Blitz',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     title: 'Rohr-Blitz | Expert Master Plumbing',
     description: 'Instant visual plumbing diagnosis and expert repair service. Available 24/7.',
-    type: 'website',
+    url: 'https://rohr-blitz.de',
+    siteName: 'Rohr-Blitz',
+    images: [
+      {
+        url: '/master-1.png', // Using the Master Expert as a temporary high-authority preview
+        width: 1200,
+        height: 630,
+        alt: 'Rohr-Blitz Master Expert Diagnosis',
+      },
+    ],
     locale: 'de_DE',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Rohr-Blitz | Master Expert Plumbing',
+    description: 'Bespoke Plumbing Diagnosis & Expert Engineering. Instant estimates, 24/7 service.',
+    images: ['/master-1.png'],
+    creator: '@rohrblitz',
   },
   icons: {
     icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
+      { url: '/logo-custom.svg', type: 'image/svg+xml' },
+      { url: '/logo-custom.svg', sizes: '32x32', type: 'image/svg+xml' },
     ],
-    apple: '/apple-icon.png',
+    apple: [
+      { url: '/logo-custom.svg', sizes: '180x180', type: 'image/svg+xml' },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 
