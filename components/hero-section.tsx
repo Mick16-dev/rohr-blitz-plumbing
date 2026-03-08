@@ -381,7 +381,54 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
                     )}
 
                     {step === 4 && (
-                      <div className="space-y-8">
+                      <div className="space-y-8 relative">
+                        <AnimatePresence>
+                          {isSubmitting && (
+                            <motion.div 
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              exit={{ opacity: 0 }}
+                              className="absolute inset-[-2rem] z-50 bg-primary/95 backdrop-blur-xl rounded-[2.5rem] flex flex-col items-center justify-center p-12 text-center"
+                            >
+                               <div className="absolute inset-0 blueprint-grid opacity-20" />
+                               <motion.div 
+                                 animate={{ top: ['0%', '100%', '0%'] }}
+                                 transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                                 className="absolute left-0 right-0 h-px bg-secondary shadow-[0_0_15px_rgba(var(--secondary),0.8)] z-10"
+                               />
+                               
+                               <div className="relative z-20 space-y-8">
+                                  <div className="relative w-32 h-32 mx-auto">
+                                     <motion.div 
+                                       animate={{ rotate: 360 }}
+                                       transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                                       className="absolute inset-0 border-2 border-dashed border-secondary/30 rounded-full"
+                                     />
+                                     <div className="absolute inset-4 border-2 border-secondary rounded-full flex items-center justify-center">
+                                        <Wrench className="w-10 h-10 text-secondary animate-pulse" />
+                                     </div>
+                                  </div>
+                                  
+                                  <div className="space-y-2">
+                                     <h3 className="text-2xl font-black text-white italic uppercase tracking-tighter">Master Diagnostic</h3>
+                                     <p className="text-white/60 text-sm font-bold uppercase tracking-[0.2em] animate-pulse">Analyzing Blueprint & Pressure Points...</p>
+                                  </div>
+
+                                  <div className="flex gap-2 justify-center">
+                                     {[1, 2, 3].map(i => (
+                                       <motion.div 
+                                         key={i}
+                                         animate={{ scale: [1, 1.5, 1], opacity: [0.3, 1, 0.3] }}
+                                         transition={{ duration: 1, repeat: Infinity, delay: i * 0.2 }}
+                                         className="w-2 h-2 bg-secondary rounded-full"
+                                       />
+                                     ))}
+                                  </div>
+                               </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+
                         <h2 className="text-2xl font-black tracking-tighter uppercase italic text-center">{t('funnel.step4.title')}</h2>
                         
                         <form onSubmit={handleSubmit} className="space-y-4 max-w-sm mx-auto">
