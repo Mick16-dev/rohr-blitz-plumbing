@@ -23,13 +23,13 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Rohr-Blitz | AI-Powered Elite Plumbing Diagnosis & Repair',
-  description: 'Experience the future of home maintenance. Instant AI diagnosis, 24/7 premium emergency service, and transparent estimates in seconds.',
-  keywords: ['plumbing', 'AI diagnosis', 'emergency plumber', 'Germany', 'home repair', 'Rohr-Blitz'],
+  title: 'Rohr-Blitz | Master Expert Plumbing Diagnosis & Repair',
+  description: 'Experience the future of home maintenance. Instant visual diagnosis, 24/7 premium emergency service, and transparent estimates in seconds.',
+  keywords: ['plumbing', 'master diagnosis', 'emergency plumber', 'Germany', 'home repair', 'Rohr-Blitz'],
   authors: [{ name: 'Rohr-Blitz' }],
   openGraph: {
-    title: 'Rohr-Blitz | AI-Powered Elite Plumbing',
-    description: 'Instant AI plumbing diagnosis and expert repair service. Available 24/7.',
+    title: 'Rohr-Blitz | Expert Master Plumbing',
+    description: 'Instant visual plumbing diagnosis and expert repair service. Available 24/7.',
     type: 'website',
     locale: 'de_DE',
   },

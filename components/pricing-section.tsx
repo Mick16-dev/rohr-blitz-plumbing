@@ -157,7 +157,8 @@ export function PricingSection({ onCtaClick }: PricingSectionProps) {
                    <span className={cn(
                      "text-xs font-black uppercase tracking-widest",
                      plan.popular ? "text-white/60" : "text-muted-foreground"
-                   )}>/{language === 'de' ? 'Monat' : 'month'}</span>
+                   )}>/
+                   {t('pricing.month')}</span>
                  </div>
               </div>
 

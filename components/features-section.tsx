@@ -5,17 +5,13 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useLanguage } from '@/app/context/language-context'
 import { Button } from '@/components/ui/button'
 import { 
-  ClipboardCheck, 
   PiggyBank, 
   Shield, 
   Wrench, 
   CheckCircle2,
-  Zap,
   Camera,
   FileText,
-  CircleDollarSign,
   Timer,
-  HeartHandshake,
   ArrowRight,
   ShieldCheck,
   Search
@@ -67,12 +63,12 @@ export function FeaturesSection({ onCtaClick }: FeaturesSectionProps) {
       opacity: 1,
       transition: { staggerChildren: 0.1 }
     }
-  }
+  } as any
 
   const item = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
-  }
+  } as any
 
   return (
     <section className="py-32 px-4 relative overflow-hidden bg-background">
@@ -135,7 +131,7 @@ export function FeaturesSection({ onCtaClick }: FeaturesSectionProps) {
               </p>
 
               <div className="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-secondary group-hover:gap-4 transition-all">
-                Learn more <ArrowRight className="w-4 h-4" />
+                {t('features.learnMore')} <ArrowRight className="w-4 h-4" />
               </div>
             </motion.div>
           ))}
@@ -148,7 +144,7 @@ export function FeaturesSection({ onCtaClick }: FeaturesSectionProps) {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             className="glass-card rounded-[3rem] p-8 lg:p-20 border-white/40 shadow-2xl relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none" />
@@ -194,7 +190,7 @@ export function FeaturesSection({ onCtaClick }: FeaturesSectionProps) {
                  
                  <h4 className="text-xl font-black text-white italic uppercase tracking-widest mb-12 flex items-center gap-3">
                     <Timer className="w-6 h-6 text-secondary animate-pulse" />
-                    How it works
+                    {t('features.howItWorks')}
                  </h4>
 
                  <div className="space-y-10 relative">

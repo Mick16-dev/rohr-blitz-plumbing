@@ -14,7 +14,7 @@ const translations: Record<Language, Record<string, string>> = {
   en: {
     // Header
     'header.emergency': 'Emergency 24/7',
-    'header.logo': 'Marcus Plumbing',
+    'header.logo': 'Rohr-Blitz',
     
     // Hero
     'hero.badge': 'Master Expert Diagnosis',
@@ -71,7 +71,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Features Section
     'features.badge': 'Why Choose Us',
-    'features.title': 'Why Choose Marcus Plumbing?',
+    'features.title': 'Why Choose Rohr-Blitz?',
     'features.subtitle': 'We combine expert craftsmanship with modern diagnostic tools to deliver faster, more accurate, and cost-effective solutions.',
     'features.painPoint': 'The Problem',
     'features.solution': 'Our Solution',
@@ -105,6 +105,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // AI Deep Dive
     'features.howItWorks': 'How It Works',
+    'features.learnMore': 'Learn more',
     'features.aiDeepDive.title': 'From Photo to Fixed in 4 Simple Steps',
     'features.aiDeepDive.step1.title': 'Snap a Photo',
     'features.aiDeepDive.step1.desc': 'Take a clear photo of the leak, clog, or damaged fixture. Our system works with any smartphone camera.',
@@ -132,6 +133,7 @@ const translations: Record<Language, Record<string, string>> = {
     'pricing.premium': 'Premium',
     'pricing.cta': 'Choose Plan',
     'pricing.popular': 'Most Popular',
+    'pricing.month': 'month',
     
     // FAQ
     'faq.title': 'Frequently Asked Questions',
@@ -147,7 +149,7 @@ const translations: Record<Language, Record<string, string>> = {
   de: {
     // Header
     'header.emergency': 'Notdienst 24/7',
-    'header.logo': 'Marcus Plumbing',
+    'header.logo': 'Rohr-Blitz',
     
     // Hero
     'hero.badge': 'Meister-Diagnose',
@@ -204,7 +206,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Features Section
     'features.badge': 'Warum wir',
-    'features.title': 'Warum Marcus Plumbing wählen?',
+    'features.title': 'Warum Rohr-Blitz wählen?',
     'features.subtitle': 'Wir kombinieren echtes Handwerk mit modernen Diagnose-Tools für schnellere, genauere und kostengünstigere Lösungen.',
     'features.painPoint': 'Das Problem',
     'features.solution': 'Unsere Lösung',
@@ -238,6 +240,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // AI Deep Dive
     'features.howItWorks': 'So funktioniert\'s',
+    'features.learnMore': 'Mehr erfahren',
     'features.aiDeepDive.title': 'Vom Foto zur Reparatur in 4 Schritten',
     'features.aiDeepDive.step1.title': 'Foto machen',
     'features.aiDeepDive.step1.desc': 'Fotografieren Sie das Leck, die Verstopfung oder die beschädigte Armatur. Funktioniert mit jedem Smartphone.',
@@ -265,6 +268,7 @@ const translations: Record<Language, Record<string, string>> = {
     'pricing.premium': 'Premium',
     'pricing.cta': 'Plan wählen',
     'pricing.popular': 'Beliebteste',
+    'pricing.month': 'Monat',
     
     // FAQ
     'faq.title': 'Häufig gestellte Fragen',
