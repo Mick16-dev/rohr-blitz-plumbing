@@ -1,16 +1,38 @@
-import type { Metadata } from 'next'
-import { Inter, Geist_Mono } from 'next/font/google'
+import type { Metadata, Viewport } from 'next'
+import { Bricolage_Grotesque, Outfit } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { LanguageProvider } from './context/language-context'
 import './globals.css'
 
-const _inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const bricolage = Bricolage_Grotesque({ 
+  subsets: ["latin"], 
+  variable: '--font-heading',
+  display: 'swap',
+});
+
+const outfit = Outfit({ 
+  subsets: ["latin"], 
+  variable: '--font-body',
+  display: 'swap',
+});
+
+export const viewport: Viewport = {
+  themeColor: '#1E3A5F',
+  width: 'device-width',
+  initialScale: 1,
+}
 
 export const metadata: Metadata = {
-  title: 'Marcus Plumbing | AI-Powered Plumbing Diagnosis',
-  description: 'Get instant plumbing estimates with our AI diagnostic tool. 24/7 emergency service in Germany.',
-  generator: 'v0.app',
+  title: 'Rohr-Blitz | AI-Powered Elite Plumbing Diagnosis & Repair',
+  description: 'Experience the future of home maintenance. Instant AI diagnosis, 24/7 premium emergency service, and transparent estimates in seconds.',
+  keywords: ['plumbing', 'AI diagnosis', 'emergency plumber', 'Germany', 'home repair', 'Rohr-Blitz'],
+  authors: [{ name: 'Rohr-Blitz' }],
+  openGraph: {
+    title: 'Rohr-Blitz | AI-Powered Elite Plumbing',
+    description: 'Instant AI plumbing diagnosis and expert repair service. Available 24/7.',
+    type: 'website',
+    locale: 'de_DE',
+  },
   icons: {
     icon: [
       {
@@ -36,8 +58,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="font-sans antialiased">
+    <html lang="de" className={`${bricolage.variable} ${outfit.variable} scroll-smooth`}>
+      <body className="font-body antialiased selection:bg-secondary/30 selection:text-secondary-foreground overflow-x-hidden">
         <LanguageProvider>
           {children}
         </LanguageProvider>
