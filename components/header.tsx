@@ -1,10 +1,14 @@
 'use client'
 
-import { Phone } from 'lucide-react'
+import { Phone, Droplets } from 'lucide-react'
 import { useLanguage } from '@/app/context/language-context'
 import { Button } from '@/components/ui/button'
 
-export function Header() {
+interface HeaderProps {
+  onEmergencyClick: () => void
+}
+
+export function Header({ onEmergencyClick }: HeaderProps) {
   const { language, setLanguage, t } = useLanguage()
 
   return (
@@ -14,21 +18,13 @@ export function Header() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
-              <svg 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                className="w-6 h-6 text-primary-foreground"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path d="M12 2v6M12 22v-6M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M2 12h6M22 12h-6M4.93 19.07l4.24-4.24M14.83 9.17l4.24-4.24" />
-              </svg>
+              <Droplets className="w-6 h-6 text-primary-foreground" />
             </div>
             <span className="text-xl font-bold text-foreground">{t('header.logo')}</span>
           </div>
 
           {/* Language Toggle + Emergency CTA */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             {/* Language Toggle */}
             <div className="flex items-center bg-muted rounded-lg p-1">
               <button
@@ -55,16 +51,17 @@ export function Header() {
 
             {/* Emergency CTA - CTA #2 */}
             <Button 
-              className="relative bg-destructive text-destructive-foreground hover:bg-destructive/90 font-semibold"
+              onClick={onEmergencyClick}
+              className="bg-destructive text-destructive-foreground hover:bg-destructive/90 font-semibold"
               size="default"
             >
-              {/* Pulsing dot */}
-              <span className="absolute -top-1 -right-1 flex h-3 w-3">
-                <span className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full bg-destructive opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-red-400"></span>
+              <span className="relative flex h-2.5 w-2.5 mr-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-300 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-200"></span>
               </span>
-              <Phone className="w-4 h-4 mr-2" />
-              {t('header.emergency')}
+              <Phone className="w-4 h-4 mr-1.5" />
+              <span className="hidden sm:inline">{t('header.emergency')}</span>
+              <span className="sm:hidden">24/7</span>
             </Button>
           </div>
         </div>

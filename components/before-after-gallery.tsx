@@ -82,42 +82,43 @@ function ComparisonSlider({ beforeImage, afterImage, beforeLabel, afterLabel }: 
   )
 }
 
+// Plumbing-specific projects
 const projects = [
   {
     id: 1,
-    beforeImage: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&h=600&fit=crop',
-    afterImage: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop',
-    titleEn: 'Kitchen Drain Repair',
-    titleDe: 'Küchenabfluss-Reparatur',
-    descEn: 'Complete drain system overhaul',
-    descDe: 'Komplette Abflusssystem-Sanierung'
+    beforeImage: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop',
+    afterImage: 'https://images.unsplash.com/photo-1585128903994-9788298932a4?w=800&h=600&fit=crop',
+    titleEn: 'Leaking Pipe Repair',
+    titleDe: 'Undichte Rohrreparatur',
+    descEn: 'Fixed burst water pipe under kitchen sink',
+    descDe: 'Geplatzte Wasserleitung unter Spüle repariert'
   },
   {
     id: 2,
     beforeImage: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=600&fit=crop',
-    afterImage: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&h=600&fit=crop',
-    titleEn: 'Bathroom Renovation',
-    titleDe: 'Badezimmer-Renovierung',
-    descEn: 'Modern fixture installation',
-    descDe: 'Moderne Armatur-Installation'
+    afterImage: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop',
+    titleEn: 'Drain Unclogging',
+    titleDe: 'Abfluss-Entstopfung',
+    descEn: 'Cleared severe bathroom drain blockage',
+    descDe: 'Starke Badezimmer-Verstopfung beseitigt'
   },
   {
     id: 3,
-    beforeImage: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop',
-    afterImage: 'https://images.unsplash.com/photo-1613685044678-0a9ae422cf5a?w=800&h=600&fit=crop',
-    titleEn: 'Pipe Replacement',
-    titleDe: 'Rohraustausch',
-    descEn: 'Old pipes replaced with copper',
-    descDe: 'Alte Rohre durch Kupfer ersetzt'
+    beforeImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+    afterImage: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&h=600&fit=crop',
+    titleEn: 'Faucet Replacement',
+    titleDe: 'Armatur-Austausch',
+    descEn: 'Installed modern fixtures in master bath',
+    descDe: 'Moderne Armaturen im Hauptbad installiert'
   }
 ]
 
-export function BeforeAfterGallery() {
-  const { language, t } = useLanguage()
+interface BeforeAfterGalleryProps {
+  onCtaClick: () => void
+}
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
+export function BeforeAfterGallery({ onCtaClick }: BeforeAfterGalleryProps) {
+  const { language, t } = useLanguage()
 
   return (
     <section className="py-20 px-4 bg-muted/30">
@@ -155,7 +156,7 @@ export function BeforeAfterGallery() {
         {/* CTA #3 */}
         <div className="text-center">
           <Button 
-            onClick={scrollToTop}
+            onClick={onCtaClick}
             size="lg"
             className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold"
           >

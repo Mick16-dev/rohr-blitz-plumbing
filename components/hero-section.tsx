@@ -44,7 +44,11 @@ function calculateEstimate(category: IssueCategory, severity: number): EstimateR
   }
 }
 
-export function HeroSection() {
+interface HeroSectionProps {
+  onCtaClick: () => void
+}
+
+export function HeroSection({ onCtaClick }: HeroSectionProps) {
   const { t } = useLanguage()
   const [step, setStep] = useState(1)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -364,7 +368,8 @@ export function HeroSection() {
                 </div>
 
                 <Button 
-                  type="submit"
+                  type="button"
+                  onClick={onCtaClick}
                   disabled={isSubmitting}
                   className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold mt-6"
                   size="lg"

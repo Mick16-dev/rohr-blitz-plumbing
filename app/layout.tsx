@@ -8,7 +8,7 @@ const _inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Rohr-Blitz | AI-Powered Plumbing Diagnosis',
+  title: 'Marcus Plumbing | AI-Powered Plumbing Diagnosis',
   description: 'Get instant plumbing estimates with our AI diagnostic tool. 24/7 emergency service in Germany.',
   generator: 'v0.app',
   icons: {

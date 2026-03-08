@@ -71,7 +71,11 @@ const plans = [
   }
 ]
 
-export function PricingSection() {
+interface PricingSectionProps {
+  onCtaClick: () => void
+}
+
+export function PricingSection({ onCtaClick }: PricingSectionProps) {
   const { language, t } = useLanguage()
 
   return (
@@ -120,6 +124,7 @@ export function PricingSection() {
                 
                 {/* CTA #4 */}
                 <Button 
+                  onClick={onCtaClick}
                   className={`w-full font-semibold ${
                     plan.popular 
                       ? 'bg-secondary text-secondary-foreground hover:bg-secondary/90' 

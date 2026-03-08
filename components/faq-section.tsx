@@ -47,7 +47,7 @@ const faqs = [
   }
 ]
 
-export function FAQSection() {
+export function FaqSection() {
   const { language, t } = useLanguage()
 
   return (

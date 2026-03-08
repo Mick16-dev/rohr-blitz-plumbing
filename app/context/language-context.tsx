@@ -14,7 +14,7 @@ const translations: Record<Language, Record<string, string>> = {
   en: {
     // Header
     'header.emergency': 'Emergency 24/7',
-    'header.logo': 'Rohr-Blitz',
+    'header.logo': 'Marcus Plumbing',
     
     // Hero
     'hero.badge': 'AI-Powered Diagnosis',
@@ -55,7 +55,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Gallery
     'gallery.title': 'Before & After Transformations',
-    'gallery.subtitle': 'See the quality of our work',
+    'gallery.subtitle': 'See the quality of our plumbing work',
     'gallery.cta': 'Start Your Diagnosis',
     
     // Testimonials
@@ -63,7 +63,7 @@ const translations: Record<Language, Record<string, string>> = {
     'testimonials.verified': 'Verified Customer',
     
     // Trust
-    'trust.title': 'Why Choose Rohr-Blitz',
+    'trust.title': 'Why Choose Marcus Plumbing',
     'trust.response': '30 min average response',
     'trust.certified': 'Certified Technicians',
     'trust.guarantee': 'Satisfaction Guarantee',
@@ -92,7 +92,7 @@ const translations: Record<Language, Record<string, string>> = {
   de: {
     // Header
     'header.emergency': 'Notdienst 24/7',
-    'header.logo': 'Rohr-Blitz',
+    'header.logo': 'Marcus Plumbing',
     
     // Hero
     'hero.badge': 'KI-gestützte Diagnose',
@@ -133,7 +133,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Gallery
     'gallery.title': 'Vorher & Nachher',
-    'gallery.subtitle': 'Sehen Sie die Qualität unserer Arbeit',
+    'gallery.subtitle': 'Sehen Sie die Qualität unserer Sanitärarbeiten',
     'gallery.cta': 'Diagnose starten',
     
     // Testimonials
@@ -141,7 +141,7 @@ const translations: Record<Language, Record<string, string>> = {
     'testimonials.verified': 'Verifizierter Kunde',
     
     // Trust
-    'trust.title': 'Warum Rohr-Blitz',
+    'trust.title': 'Warum Marcus Plumbing',
     'trust.response': '30 Min. durchschnittliche Reaktionszeit',
     'trust.certified': 'Zertifizierte Techniker',
     'trust.guarantee': 'Zufriedenheitsgarantie',
@@ -175,7 +175,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>('en')
 
   useEffect(() => {
-    const stored = localStorage.getItem('rohr-blitz-lang') as Language | null
+    const stored = localStorage.getItem('marcus-plumbing-lang') as Language | null
     if (stored && (stored === 'en' || stored === 'de')) {
       setLanguageState(stored)
     } else {
@@ -188,7 +188,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang)
-    localStorage.setItem('rohr-blitz-lang', lang)
+    localStorage.setItem('marcus-plumbing-lang', lang)
   }
 
   const t = (key: string): string => {
