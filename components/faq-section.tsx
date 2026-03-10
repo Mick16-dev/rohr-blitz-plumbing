@@ -10,14 +10,14 @@ import {
 import { Button } from '@/components/ui/button'
 import { Magnetic } from '@/components/ui/magnetic'
 import { motion } from 'framer-motion'
-import { HelpCircle, Sparkles, MessageSquare } from 'lucide-react'
+import { HelpCircle, MessageSquare } from 'lucide-react'
 
 const faqs = [
   {
-    questionEn: 'How does the AI diagnostic tool work?',
-    questionDe: 'Wie funktioniert das KI-Diagnose-Tool?',
-    answerEn: 'Simply upload a photo of your plumbing issue, select the category and severity, and our AI analyzes the image to provide an instant preliminary estimate. A certified technician then reviews your case and contacts you within 30 minutes.',
-    answerDe: 'Laden Sie einfach ein Foto Ihres Sanitärproblems hoch, wählen Sie Kategorie und Schweregrad, und unsere KI analysiert das Bild, um sofort eine vorläufige Schätzung zu liefern. Ein zertifizierter Techniker prüft dann Ihren Fall und kontaktiert Sie innerhalb von 30 Minuten.'
+    questionEn: 'How does the Master visual diagnostic tool work?',
+    questionDe: 'Wie funktioniert das visuelle Meister-Diagnose-Tool?',
+    answerEn: 'Simply upload a photo of your plumbing issue, and our master technicians analyze the image to provide an instant preliminary estimate. A certified expert then reviews your case and contacts you within 30 minutes.',
+    answerDe: 'Laden Sie einfach ein Foto Ihres Sanitärproblems hoch, und unsere Sanitärmeister analysieren das Bild, um sofort eine vorläufige Schätzung zu liefern. Ein zertifizierter Experte prüft dann Ihren Fall und kontaktiert Sie innerhalb von 30 Minuten.'
   },
   {
     questionEn: 'What is your emergency response time?',
@@ -46,8 +46,8 @@ const faqs = [
   {
     questionEn: 'Is the estimate guaranteed?',
     questionDe: 'Ist die Schätzung garantiert?',
-    answerEn: 'Our AI-generated estimates are preliminary and based on the information provided. The final price is confirmed after on-site inspection. We guarantee no surprise charges beyond the quoted range without your approval.',
-    answerDe: 'Unsere KI-generierten Schätzungen sind vorläufig und basieren auf den bereitgestellten Informationen. Der endgültige Preis wird nach der Vor-Ort-Inspektion bestätigt. Wir garantieren keine Überraschungskosten über den genannten Bereich hinaus ohne Ihre Zustimmung.'
+    answerEn: 'Our expert-generated estimates are preliminary and based on the information provided. The final price is confirmed after on-site inspection. We guarantee no surprise charges beyond the quoted range without your approval.',
+    answerDe: 'Unsere expertengestützten Schätzungen sind vorläufig und basieren auf den bereitgestellten Informationen. Der endgültige Preis wird nach der Vor-Ort-Inspektion bestätigt. Wir garantieren keine Überraschungskosten über den genannten Bereich hinaus ohne Ihre Zustimmung.'
   }
 ]
 
@@ -74,12 +74,12 @@ export function FaqSection() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      
+
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-secondary/5 rounded-full blur-[120px]" />
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-[120px]" />
 
       <div className="max-w-4xl mx-auto relative z-10">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -93,8 +93,8 @@ export function FaqSection() {
             {t('faq.title')}
           </h2>
           <div className="flex items-center justify-center gap-3 text-muted-foreground font-black uppercase tracking-[0.2em] text-xs">
-             <MessageSquare className="w-4 h-4 text-secondary" />
-             Still have questions? Chat with our AI expert.
+            <MessageSquare className="w-4 h-4 text-secondary" />
+            Still have questions? Chat with our support expert.
           </div>
         </motion.div>
 
@@ -107,7 +107,7 @@ export function FaqSection() {
               transition={{ delay: index * 0.05 }}
               viewport={{ once: true }}
             >
-              <AccordionItem 
+              <AccordionItem
                 value={`item-${index}`}
                 className="group border border-border/50 rounded-[2.5rem] px-8 bg-white/40 backdrop-blur-xl shadow-xl transition-all duration-500 hover:bg-white hover:border-primary/20 overflow-hidden"
               >
@@ -117,35 +117,35 @@ export function FaqSection() {
                   </span>
                 </AccordionTrigger>
                 <AccordionContent className="pb-8 text-lg font-medium text-muted-foreground leading-relaxed italic pr-12">
-                   <div className="flex gap-4">
-                      <div className="w-1 h-auto bg-secondary/30 rounded-full shrink-0" />
-                      <div>{language === 'de' ? faq.answerDe : faq.answerEn}</div>
-                   </div>
+                  <div className="flex gap-4">
+                    <div className="w-1 h-auto bg-secondary/30 rounded-full shrink-0" />
+                    <div>{language === 'de' ? faq.answerDe : faq.answerEn}</div>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             </motion.div>
           ))}
         </Accordion>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className="mt-24 p-12 glass-card rounded-[3rem] border-secondary/20 flex flex-col items-center text-center relative overflow-hidden group"
         >
-           <div className="absolute top-0 right-0 w-32 h-32 bg-secondary opacity-5 group-hover:opacity-10 transition-opacity blur-3xl" />
-           <Sparkles className="w-10 h-10 text-secondary mb-6 animate-pulse-premium" />
-           <h3 className="text-2xl font-black italic uppercase tracking-tighter text-foreground mb-4">
-              Cant find what you need?
-           </h3>
-           <p className="text-muted-foreground font-medium mb-8 max-w-lg">
-              Our support team is available 24/7 to assist with ANY plumbing emergency or technical query.
-           </p>
-           <Magnetic strength={0.2}>
-             <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-black uppercase tracking-[0.2em] h-16 px-10 rounded-2xl shadow-xl transition-all active:scale-95">
-                Request VIP Support
-             </Button>
-           </Magnetic>
+          <div className="absolute top-0 right-0 w-32 h-32 bg-secondary opacity-5 group-hover:opacity-10 transition-opacity blur-3xl" />
+          <HelpCircle className="w-10 h-10 text-secondary mb-6 animate-pulse-premium" />
+          <h3 className="text-2xl font-black italic uppercase tracking-tighter text-foreground mb-4">
+            Cant find what you need?
+          </h3>
+          <p className="text-muted-foreground font-medium mb-8 max-w-lg">
+            Our support team is available 24/7 to assist with ANY plumbing emergency or technical query.
+          </p>
+          <Magnetic strength={0.2}>
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-black uppercase tracking-[0.2em] h-16 px-10 rounded-2xl shadow-xl transition-all active:scale-95">
+              Request VIP Support
+            </Button>
+          </Magnetic>
         </motion.div>
       </div>
     </section>

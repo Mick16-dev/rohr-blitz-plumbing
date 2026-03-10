@@ -4,7 +4,7 @@ import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { useLanguage } from '@/app/context/language-context'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Sparkles, MoveHorizontal } from 'lucide-react'
+import { ArrowRight, BadgeCheck, MoveHorizontal } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface ComparisonSliderProps {
@@ -45,15 +45,15 @@ function ComparisonSlider({ beforeImage, afterImage, beforeLabel, afterLabel }: 
       onTouchStart={(e) => handleMove(e.touches[0].clientX)}
     >
       {/* After Image (background) */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
         style={{ backgroundImage: `url(${afterImage})` }}
       />
-      
+
       {/* Before Image (clipped) */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-        style={{ 
+        style={{
           backgroundImage: `url(${beforeImage})`,
           clipPath: `inset(0 ${100 - sliderPosition}% 0 0)`
         }}
@@ -64,7 +64,7 @@ function ComparisonSlider({ beforeImage, afterImage, beforeLabel, afterLabel }: 
         className="absolute top-0 bottom-0 w-1 bg-white/50 backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.5)]"
         style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
       >
-        <motion.div 
+        <motion.div
           animate={{ scale: [1, 1.1, 1] }}
           transition={{ repeat: Infinity, duration: 3 }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white backdrop-blur-xl rounded-2xl shadow-2xl flex items-center justify-center border border-white/50"
@@ -124,16 +124,16 @@ export function BeforeAfterGallery({ onCtaClick }: BeforeAfterGalleryProps) {
   return (
     <section className="py-32 px-4 relative overflow-hidden bg-background">
       <div className="absolute inset-0 mesh-gradient opacity-20" />
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-24"
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 text-secondary text-xs font-black rounded-xl uppercase tracking-[0.2em] mb-6 shadow-sm">
-            <Sparkles className="w-4 h-4" />
+            <BadgeCheck className="w-4 h-4" />
             {t('gallery.badge') || "Visual Excellence"}
           </span>
           <h2 className="text-4xl sm:text-6xl font-black text-foreground mb-6 tracking-tighter italic uppercase underline decoration-primary decoration-8 underline-offset-8">
@@ -146,7 +146,7 @@ export function BeforeAfterGallery({ onCtaClick }: BeforeAfterGalleryProps) {
 
         <div className="grid md:grid-cols-3 gap-10 mb-24">
           {projects.map((project, idx) => (
-            <motion.div 
+            <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -174,13 +174,13 @@ export function BeforeAfterGallery({ onCtaClick }: BeforeAfterGalleryProps) {
         </div>
 
         {/* CTA #3 */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           className="text-center"
         >
-          <Button 
+          <Button
             onClick={onCtaClick}
             size="lg"
             className="bg-primary text-primary-foreground hover:bg-primary/90 font-black uppercase tracking-[0.2em] h-20 px-12 rounded-2xl shadow-2xl shadow-primary/20 group relative overflow-hidden"

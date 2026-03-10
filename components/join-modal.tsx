@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { X, Users, Briefcase, CheckCircle, Loader2, Sparkles, ArrowRight, UserCheck, ShieldCheck } from 'lucide-react'
+import { X, Users, Briefcase, CheckCircle, Loader2, ArrowRight, UserCheck, ShieldCheck } from 'lucide-react'
 import { useLanguage } from '@/app/context/language-context'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -86,16 +86,16 @@ export function JoinModal({ isOpen, onClose }: JoinModalProps) {
       {isOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           {/* Elite Backdrop */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="absolute inset-0 bg-primary/95 backdrop-blur-2xl"
             onClick={handleClose}
           />
-          
+
           {/* Modal Container */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -106,7 +106,7 @@ export function JoinModal({ isOpen, onClose }: JoinModalProps) {
             <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-primary/5 rounded-full blur-[100px]" />
 
             {/* Close button */}
-            <button 
+            <button
               onClick={handleClose}
               className="absolute top-8 right-8 w-12 h-12 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-secondary hover:text-white transition-all z-20 group"
             >
@@ -116,7 +116,7 @@ export function JoinModal({ isOpen, onClose }: JoinModalProps) {
             <AnimatePresence mode="wait">
               {/* Universal Form Container */}
               {step === 'customer' && (
-                <motion.div 
+                <motion.div
                   key="form"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -131,7 +131,7 @@ export function JoinModal({ isOpen, onClose }: JoinModalProps) {
                     <h2 className="text-4xl sm:text-5xl font-black text-foreground mb-4 tracking-tighter italic uppercase leading-none">{t.customerTitle}</h2>
                     <p className="text-muted-foreground font-medium italic">{t.subtitle}</p>
                   </div>
-                  
+
                   <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-3">
                       <Label className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground ml-1">{t.formName}</Label>
@@ -174,9 +174,9 @@ export function JoinModal({ isOpen, onClose }: JoinModalProps) {
                         placeholder="Any other details..."
                       />
                     </div>
-                    
+
                     <div className="sm:col-span-2 pt-4">
-                      <Button 
+                      <Button
                         type="submit"
                         disabled={isSubmitting}
                         className="w-full h-16 rounded-2xl bg-secondary text-white hover:bg-secondary/90 font-black uppercase tracking-[0.2em] shadow-2xl shadow-secondary/20 transition-all active:scale-95 group relative overflow-hidden"
@@ -189,8 +189,8 @@ export function JoinModal({ isOpen, onClose }: JoinModalProps) {
                           </div>
                         ) : (
                           <span className="relative z-10 flex items-center justify-center gap-3 italic text-lg">
-                             {t.submitCustomer}
-                             <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                            {t.submitCustomer}
+                            <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
                           </span>
                         )}
                       </Button>
@@ -201,13 +201,13 @@ export function JoinModal({ isOpen, onClose }: JoinModalProps) {
 
               {/* Success */}
               {step === 'success' && (
-                <motion.div 
+                <motion.div
                   key="success"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   className="p-12 lg:p-24 text-center relative z-10"
                 >
-                  <motion.div 
+                  <motion.div
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ type: "spring", damping: 12, stiffness: 200 }}
@@ -219,17 +219,17 @@ export function JoinModal({ isOpen, onClose }: JoinModalProps) {
                   <p className="text-xl font-medium text-muted-foreground mb-12 italic leading-relaxed max-w-md mx-auto">
                     {t.successCustomer}
                   </p>
-                  <Button 
+                  <Button
                     onClick={handleClose}
                     className="bg-primary text-white hover:bg-primary/90 font-black uppercase tracking-[0.2em] h-16 px-12 rounded-2xl shadow-2xl active:scale-95"
                   >
                     {t.close}
                   </Button>
-                  
+
                   {/* Decorative icon (Abstract) */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none w-full h-full opacity-20">
-                     <ShieldCheck className="absolute top-10 left-10 w-8 h-8 text-secondary animate-pulse" />
-                     <CheckCircle className="absolute bottom-10 right-10 w-12 h-12 text-primary animate-bounce" />
+                    <ShieldCheck className="absolute top-10 left-10 w-8 h-8 text-secondary animate-pulse" />
+                    <CheckCircle className="absolute bottom-10 right-10 w-12 h-12 text-primary animate-bounce" />
                   </div>
                 </motion.div>
               )}

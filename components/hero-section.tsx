@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useCallback } from 'react'
-import { Upload, Droplet, CircleOff, Wrench, Plus, CheckCircle, Clock, Loader2, Sparkles, ShieldCheck, MapPin } from 'lucide-react'
+import { Upload, Droplet, CircleOff, Wrench, Plus, CheckCircle, Clock, Loader2, ShieldCheck, MapPin } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useLanguage } from '@/app/context/language-context'
 import { Button } from '@/components/ui/button'
@@ -37,10 +37,10 @@ function calculateEstimate(category: IssueCategory, severity: number): EstimateR
     broken: { min: 150, max: 300 },
     installation: { min: 200, max: 500 }
   }
-  
+
   const multiplier = 1 + (severity - 1) * 0.25
   const base = baseRates[category]
-  
+
   return {
     min: Math.round(base.min * multiplier),
     max: Math.round(base.max * multiplier)
@@ -117,14 +117,14 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
+
     // Simulate Blueprint Scanning phase
     await new Promise(resolve => setTimeout(resolve, 3500))
-    
+
     if (formData.issueType) {
       setEstimate(calculateEstimate(formData.issueType, formData.severity))
     }
-    
+
     setIsSubmitting(false)
     setIsSuccess(true)
   }
@@ -153,16 +153,16 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
   return (
     <section className="relative pt-32 pb-24 px-4 min-h-screen mesh-gradient overflow-hidden">
       <div className="absolute inset-0 grain-overlay opacity-50" />
-      
+
       <div className="max-w-6xl mx-auto relative z-10 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
         {/* Hero Text */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex-1 text-left lg:max-w-xl"
         >
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
@@ -171,11 +171,11 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
             <ShieldCheck className="w-4 h-4 text-secondary" />
             {t('hero.badge')}
           </motion.span>
-          
+
           <h1 className="text-5xl sm:text-6xl font-black text-foreground mb-6 leading-[1.05] tracking-tighter italic uppercase underline decoration-secondary decoration-8 underline-offset-8">
             {t('hero.title')}
           </h1>
-          
+
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed font-medium max-w-lg">
             {t('hero.subtitle')}
           </p>
@@ -197,7 +197,7 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
         </motion.div>
 
         {/* Funnel Card */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -210,15 +210,15 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
                 <div className="flex items-center justify-between gap-3 mb-10">
                   {[1, 2, 3, 4].map((s) => (
                     <div key={s} className="flex-1 relative h-2">
-                       <div className="absolute inset-0 bg-muted/30 rounded-full" />
-                       <motion.div 
+                      <div className="absolute inset-0 bg-muted/30 rounded-full" />
+                      <motion.div
                         initial={false}
                         animate={{ width: s <= step ? '100%' : '0%' }}
                         className={cn(
                           "absolute inset-0 rounded-full transition-all duration-500",
                           s < step ? "bg-success" : "bg-secondary"
                         )}
-                       />
+                      />
                     </div>
                   ))}
                 </div>
@@ -238,9 +238,9 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
                     </div>
                     <h2 className="text-3xl font-black text-foreground mb-4 italic uppercase">{t('funnel.success.title')}</h2>
                     <p className="text-muted-foreground mb-8 font-medium">{t('funnel.success.desc')}</p>
-                    
+
                     {estimate && (
-                      <motion.div 
+                      <motion.div
                         initial={{ scale: 0.9, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ delay: 0.3 }}
@@ -252,7 +252,7 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
                         </p>
                       </motion.div>
                     )}
-                    
+
                     <div className="flex items-center justify-center gap-3 py-4 px-6 bg-primary rounded-2xl text-primary-foreground shadow-lg shadow-primary/20">
                       <MapPin className="w-5 h-5 text-secondary animate-pulse" />
                       <span className="font-bold uppercase tracking-wider text-sm">
@@ -275,7 +275,7 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
                           <h2 className="text-2xl font-black tracking-tighter uppercase italic mb-2">{t('funnel.step1.title')}</h2>
                           <p className="text-muted-foreground font-medium">{t('funnel.step1.desc')}</p>
                         </div>
-                        
+
                         <div
                           onDrop={handleImageDrop}
                           onDragOver={(e) => e.preventDefault()}
@@ -297,15 +297,15 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
                         <div className="flex items-center gap-6">
                           {formData.imagePreview && (
                             <div className="relative">
-                               <img src={formData.imagePreview} alt="Issue" className="w-24 h-24 object-cover rounded-[1.5rem] ring-4 ring-white shadow-xl" />
-                               <div className="absolute -top-3 -right-3 bg-secondary p-1.5 rounded-full shadow-lg">
-                                  <CheckCircle className="w-4 h-4 text-white" />
-                               </div>
+                              <img src={formData.imagePreview} alt="Issue" className="w-24 h-24 object-cover rounded-[1.5rem] ring-4 ring-white shadow-xl" />
+                              <div className="absolute -top-3 -right-3 bg-secondary p-1.5 rounded-full shadow-lg">
+                                <CheckCircle className="w-4 h-4 text-white" />
+                              </div>
                             </div>
                           )}
                           <h2 className="text-2xl font-black tracking-tighter uppercase italic">{t('funnel.step2.title')}</h2>
                         </div>
-                        
+
                         <div className="grid grid-cols-2 gap-4">
                           {issueCategories.map(({ type, icon, color }) => (
                             <motion.button
@@ -315,8 +315,8 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
                               onClick={() => handleIssueSelect(type)}
                               className={cn(
                                 "relative p-6 rounded-[2rem] border-2 text-left transition-all duration-300",
-                                formData.issueType === type 
-                                  ? "border-secondary bg-white shadow-xl shadow-secondary/10" 
+                                formData.issueType === type
+                                  ? "border-secondary bg-white shadow-xl shadow-secondary/10"
                                   : "border-border/50 bg-card/30 hover:bg-white hover:border-secondary/30"
                               )}
                             >
@@ -336,7 +336,7 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
                     {step === 3 && (
                       <div className="space-y-8">
                         <h2 className="text-2xl font-black tracking-tighter uppercase italic text-center">{t('funnel.step3.title')}</h2>
-                        
+
                         <div className="max-w-md mx-auto space-y-12">
                           <div className="px-4">
                             <Slider
@@ -348,28 +348,28 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
                               className="w-full"
                             />
                           </div>
-                          
+
                           <div className="flex justify-between text-[10px] font-black uppercase tracking-tighter text-muted-foreground px-1">
                             {severityLabels.map((label, i) => (
                               <span key={i} className={cn("transition-colors", formData.severity === i + 1 ? "text-primary" : "")}>{label}</span>
                             ))}
                           </div>
 
-                          <motion.div 
+                          <motion.div
                             animate={{ scale: [1, 1.02, 1] }}
                             transition={{ repeat: Infinity, duration: 2 }}
                             className={cn(
                               "text-center p-8 rounded-[2rem] shadow-xl",
-                              formData.severity >= 4 ? "bg-destructive/10 text-destructive-foreground shadow-destructive/5" : 
-                              formData.severity >= 3 ? "bg-amber-500/10 text-amber-600 shadow-amber-500/5" : 
-                              "bg-success/10 text-success shadow-success/5"
+                              formData.severity >= 4 ? "bg-destructive/10 text-destructive-foreground shadow-destructive/5" :
+                                formData.severity >= 3 ? "bg-amber-500/10 text-amber-600 shadow-amber-500/5" :
+                                  "bg-success/10 text-success shadow-success/5"
                             )}
                           >
                             <p className="font-black text-3xl uppercase italic">{severityLabels[formData.severity - 1]}</p>
                           </motion.div>
 
                           <Magnetic strength={0.2} className="w-full">
-                            <Button 
+                            <Button
                               onClick={handleSeverityContinue}
                               className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-black uppercase tracking-widest py-8 rounded-2xl text-lg shadow-2xl shadow-primary/20"
                             >
@@ -384,53 +384,53 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
                       <div className="space-y-8 relative">
                         <AnimatePresence>
                           {isSubmitting && (
-                            <motion.div 
+                            <motion.div
                               initial={{ opacity: 0 }}
                               animate={{ opacity: 1 }}
                               exit={{ opacity: 0 }}
                               className="absolute inset-[-2rem] z-50 bg-primary/95 backdrop-blur-xl rounded-[2.5rem] flex flex-col items-center justify-center p-12 text-center"
                             >
-                               <div className="absolute inset-0 blueprint-grid opacity-20" />
-                               <motion.div 
-                                 animate={{ top: ['0%', '100%', '0%'] }}
-                                 transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                                 className="absolute left-0 right-0 h-px bg-secondary shadow-[0_0_15px_rgba(var(--secondary),0.8)] z-10"
-                               />
-                               
-                               <div className="relative z-20 space-y-8">
-                                  <div className="relative w-32 h-32 mx-auto">
-                                     <motion.div 
-                                       animate={{ rotate: 360 }}
-                                       transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                                       className="absolute inset-0 border-2 border-dashed border-secondary/30 rounded-full"
-                                     />
-                                     <div className="absolute inset-4 border-2 border-secondary rounded-full flex items-center justify-center">
-                                        <Wrench className="w-10 h-10 text-secondary animate-pulse" />
-                                     </div>
-                                  </div>
-                                  
-                                  <div className="space-y-2">
-                                     <h3 className="text-2xl font-black text-white italic uppercase tracking-tighter">Master Diagnostic</h3>
-                                     <p className="text-white/60 text-sm font-bold uppercase tracking-[0.2em] animate-pulse">Analyzing Blueprint & Pressure Points...</p>
-                                  </div>
+                              <div className="absolute inset-0 blueprint-grid opacity-20" />
+                              <motion.div
+                                animate={{ top: ['0%', '100%', '0%'] }}
+                                transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                                className="absolute left-0 right-0 h-px bg-secondary shadow-[0_0_15px_rgba(var(--secondary),0.8)] z-10"
+                              />
 
-                                  <div className="flex gap-2 justify-center">
-                                     {[1, 2, 3].map(i => (
-                                       <motion.div 
-                                         key={i}
-                                         animate={{ scale: [1, 1.5, 1], opacity: [0.3, 1, 0.3] }}
-                                         transition={{ duration: 1, repeat: Infinity, delay: i * 0.2 }}
-                                         className="w-2 h-2 bg-secondary rounded-full"
-                                       />
-                                     ))}
+                              <div className="relative z-20 space-y-8">
+                                <div className="relative w-32 h-32 mx-auto">
+                                  <motion.div
+                                    animate={{ rotate: 360 }}
+                                    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                                    className="absolute inset-0 border-2 border-dashed border-secondary/30 rounded-full"
+                                  />
+                                  <div className="absolute inset-4 border-2 border-secondary rounded-full flex items-center justify-center">
+                                    <Wrench className="w-10 h-10 text-secondary animate-pulse" />
                                   </div>
-                               </div>
+                                </div>
+
+                                <div className="space-y-2">
+                                  <h3 className="text-2xl font-black text-white italic uppercase tracking-tighter">Master Diagnostic</h3>
+                                  <p className="text-white/60 text-sm font-bold uppercase tracking-[0.2em] animate-pulse">Analyzing Blueprint & Pressure Points...</p>
+                                </div>
+
+                                <div className="flex gap-2 justify-center">
+                                  {[1, 2, 3].map(i => (
+                                    <motion.div
+                                      key={i}
+                                      animate={{ scale: [1, 1.5, 1], opacity: [0.3, 1, 0.3] }}
+                                      transition={{ duration: 1, repeat: Infinity, delay: i * 0.2 }}
+                                      className="w-2 h-2 bg-secondary rounded-full"
+                                    />
+                                  ))}
+                                </div>
+                              </div>
                             </motion.div>
                           )}
                         </AnimatePresence>
 
                         <h2 className="text-2xl font-black tracking-tighter uppercase italic text-center">{t('funnel.step4.title')}</h2>
-                        
+
                         <form onSubmit={handleSubmit} className="space-y-4 max-w-sm mx-auto">
                           {[
                             { id: 'name', label: t('form.name'), type: 'text' },
@@ -452,7 +452,7 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
                           ))}
 
                           <Magnetic strength={0.2} className="w-full">
-                            <Button 
+                            <Button
                               disabled={isSubmitting}
                               className="w-full bg-secondary text-white hover:bg-secondary/90 font-black uppercase tracking-[0.2em] h-16 rounded-2xl mt-6 shadow-xl shadow-secondary/20 relative group overflow-hidden"
                             >
@@ -468,16 +468,16 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
               </AnimatePresence>
             </CardContent>
           </Card>
-          
+
           <div className="mt-8 flex items-center justify-center gap-8 text-muted-foreground/60">
-             <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4" />
-                <span className="text-[10px] font-bold uppercase tracking-widest">Encrypted</span>
-             </div>
-             <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4" />
-                <span className="text-[10px] font-bold uppercase tracking-widest">GDPR Ready</span>
-             </div>
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4" />
+              <span className="text-[10px] font-bold uppercase tracking-widest">Encrypted</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4" />
+              <span className="text-[10px] font-bold uppercase tracking-widest">GDPR Ready</span>
+            </div>
           </div>
         </motion.div>
       </div>
