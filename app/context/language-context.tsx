@@ -15,12 +15,12 @@ const translations: Record<Language, Record<string, string>> = {
     // Header
     'header.emergency': 'Emergency 24/7',
     'header.logo': 'Rohr-Blitz',
-    
+
     // Hero
     'hero.badge': 'Master Expert Diagnosis',
     'hero.title': 'Bespoke Plumbing Diagnosis & Expert Engineering',
     'hero.subtitle': 'Experience the future of home maintenance. Instant visual diagnostic analysis by certified German Master Technicians. Transparent, elite, and available 24/7.',
-    
+
     // Diagnostic Funnel
     'funnel.step1.title': 'Upload Photo',
     'funnel.step1.desc': 'Drag & drop or click to upload',
@@ -33,58 +33,58 @@ const translations: Record<Language, Record<string, string>> = {
     'funnel.success.title': 'Estimate Submitted!',
     'funnel.success.desc': 'A certified technician is reviewing your case.',
     'funnel.success.eta': 'Expected callback within',
-    
+
     // Issue Categories
     'issue.leaking': 'Leaking Pipe',
     'issue.clogged': 'Clogged Drain',
     'issue.broken': 'Broken Fixture',
     'issue.installation': 'New Installation',
-    
+
     // Severity
     'severity.1': 'Minor',
     'severity.2': 'Moderate',
     'severity.3': 'Significant',
     'severity.4': 'Severe',
     'severity.5': 'Emergency',
-    
+
     // Form
     'form.name': 'Full Name',
     'form.phone': 'Phone Number',
     'form.email': 'Email Address',
     'form.address': 'Address',
-    
+
     // Gallery
     'gallery.title': 'Before & After Transformations',
     'gallery.subtitle': 'See the quality of our master plumbing work',
     'gallery.cta': 'Start Your Diagnosis',
-    
+
     // Testimonials
     'testimonials.title': 'What Our Customers Say',
     'testimonials.verified': 'Verified Customer',
-    
+
     // Trust
     'trust.title': 'Trusted by Thousands',
     'trust.response': '30 min average response',
     'trust.certified': 'Certified Technicians',
     'trust.guarantee': 'Satisfaction Guarantee',
     'trust.insurance': 'Fully Insured',
-    
+
     // Features Section
     'features.badge': 'Why Choose Us',
     'features.title': 'Why Choose Rohr-Blitz?',
     'features.subtitle': 'We combine expert craftsmanship with modern diagnostic tools to deliver faster, more accurate, and cost-effective solutions.',
     'features.painPoint': 'The Problem',
     'features.solution': 'Our Solution',
-    
-    // AI Diagnosis Pillar
-    'features.ai-diagnosis.title': 'Master Visual Diagnosis',
-    'features.ai-diagnosis.tagline': 'Instant issue identification with repair guidance',
-    'features.ai-diagnosis.pain': 'Traditional plumbing inspections require scheduling, waiting for a technician, and paying for diagnostic visits just to understand the problem.',
-    'features.ai-diagnosis.solution': 'Our master technicians analyze your photo in seconds, identify the exact issue, and provide a detailed breakdown of required repairs, tools, and parts.',
-    'features.ai-diagnosis.benefit1': 'Identifies 50+ common plumbing issues from a single photo',
-    'features.ai-diagnosis.benefit2': 'Lists exact parts needed (with model numbers) so you can price-compare',
-    'features.ai-diagnosis.benefit3': 'Provides difficulty rating so you know if it\'s DIY or requires a pro',
-    
+
+    // Master Diagnosis Pillar
+    'features.expert-diagnosis.title': 'Master Visual Diagnosis',
+    'features.expert-diagnosis.tagline': 'Instant issue identification with repair guidance',
+    'features.expert-diagnosis.pain': 'Traditional plumbing inspections require scheduling, waiting for a technician, and paying for diagnostic visits just to understand the problem.',
+    'features.expert-diagnosis.solution': 'Our master technicians analyze your photo in seconds, identify the exact issue, and provide a detailed breakdown of required repairs, tools, and parts.',
+    'features.expert-diagnosis.benefit1': 'Identifies 50+ common plumbing issues from a single photo',
+    'features.expert-diagnosis.benefit2': 'Lists exact parts needed (with model numbers) so you can price-compare',
+    'features.expert-diagnosis.benefit3': 'Provides difficulty rating so you know if it\'s DIY or requires a pro',
+
     // Time & Cost Pillar
     'features.time-cost.title': 'Time & Cost Savings',
     'features.time-cost.tagline': 'No wasted hours or surprise invoices',
@@ -93,7 +93,7 @@ const translations: Record<Language, Record<string, string>> = {
     'features.time-cost.benefit1': 'Save 40% on average vs. traditional emergency call-outs',
     'features.time-cost.benefit2': 'Transparent pricing with no hidden fees or surprise charges',
     'features.time-cost.benefit3': 'Skip the diagnostic fee entirely with our remote pre-assessment',
-    
+
     // Reliability Pillar
     'features.reliability.title': 'Reliability & Support',
     'features.reliability.tagline': '24/7 availability with guaranteed workmanship',
@@ -102,20 +102,20 @@ const translations: Record<Language, Record<string, string>> = {
     'features.reliability.benefit1': '30-minute average response time for emergencies',
     'features.reliability.benefit2': '2-year warranty on all repairs with no fine print',
     'features.reliability.benefit3': 'Background-checked, licensed, and fully insured technicians',
-    
-    // AI Deep Dive
+
+    // Master Deep Dive
     'features.howItWorks': 'How It Works',
     'features.learnMore': 'Learn more',
-    'features.aiDeepDive.title': 'From Photo to Fixed in 4 Simple Steps',
-    'features.aiDeepDive.step1.title': 'Visual Capture',
-    'features.aiDeepDive.step1.desc': 'Capture a high-fidelity image of the disruption. Our expert algorithms process the blueprint of the issue instantly.',
-    'features.aiDeepDive.step2.title': 'Master Validation',
-    'features.aiDeepDive.step2.desc': 'Our Master Technicians validate the diagnostic data, ensuring engineering-grade accuracy and localized compliance.',
-    'features.aiDeepDive.step3.title': 'Detailed Report',
-    'features.aiDeepDive.step3.desc': 'Receive a breakdown of the problem, required parts, estimated repair time, and cost range.',
-    'features.aiDeepDive.step4.title': 'Elite Resolution',
-    'features.aiDeepDive.step4.desc': 'Deploy a certified Master Technician who arrives fully equipped to solve the disruption with surgical precision.',
-    
+    'features.masterDeepDive.title': 'From Photo to Fixed in 4 Simple Steps',
+    'features.masterDeepDive.step1.title': 'Visual Capture',
+    'features.masterDeepDive.step1.desc': 'Capture a high-fidelity image of the disruption. Our expert technicians process the details of the issue instantly.',
+    'features.masterDeepDive.step2.title': 'Master Validation',
+    'features.masterDeepDive.step2.desc': 'Our Master Technicians validate the diagnostic data, ensuring engineering-grade accuracy and localized compliance.',
+    'features.masterDeepDive.step3.title': 'Detailed Report',
+    'features.masterDeepDive.step3.desc': 'Receive a breakdown of the problem, required parts, estimated repair time, and cost range.',
+    'features.masterDeepDive.step4.title': 'Elite Resolution',
+    'features.masterDeepDive.step4.desc': 'Deploy a certified Master Technician who arrives fully equipped to solve the disruption with surgical precision.',
+
     // Results Stats
     'features.results.title': 'Real Results, Real Savings',
     'features.results.diagnosis': 'Avg. diagnosis time',
@@ -124,7 +124,7 @@ const translations: Record<Language, Record<string, string>> = {
     'features.results.satisfaction': 'Customer rating',
     'features.cta': 'Try Master Diagnosis Free',
     'features.ctaSubtext': 'No credit card required. Get your estimate in under 5 minutes.',
-    
+
     // Pricing
     'pricing.title': 'Transparent Pricing',
     'pricing.subtitle': 'No hidden fees, no surprises',
@@ -134,10 +134,10 @@ const translations: Record<Language, Record<string, string>> = {
     'pricing.cta': 'Choose Plan',
     'pricing.popular': 'Most Popular',
     'pricing.month': 'month',
-    
+
     // FAQ
     'faq.title': 'Frequently Asked Questions',
-    
+
     // Footer
     'footer.cta': 'Get Started Now',
     'footer.contact': 'Contact Us',
@@ -150,12 +150,12 @@ const translations: Record<Language, Record<string, string>> = {
     // Header
     'header.emergency': 'Notdienst 24/7',
     'header.logo': 'Rohr-Blitz',
-    
+
     // Hero
     'hero.badge': 'Meister-Diagnose',
     'hero.title': 'Meisterhafte Präzision & Digitale Sanitär-Diagnostik',
     'hero.subtitle': 'Erleben Sie die Zukunft der Haustechnik. Visuelle Sofort-Analyse durch zertifizierte deutsche Handwerksmeister. Transparent, exzellent und 24/7 verfügbar.',
-    
+
     // Diagnostic Funnel
     'funnel.step1.title': 'Foto hochladen',
     'funnel.step1.desc': 'Ziehen & ablegen oder klicken',
@@ -168,58 +168,58 @@ const translations: Record<Language, Record<string, string>> = {
     'funnel.success.title': 'Anfrage gesendet!',
     'funnel.success.desc': 'Ein zertifizierter Techniker prüft Ihren Fall.',
     'funnel.success.eta': 'Erwarteter Rückruf innerhalb',
-    
+
     // Issue Categories
     'issue.leaking': 'Undichtes Rohr',
     'issue.clogged': 'Verstopfter Abfluss',
     'issue.broken': 'Defekte Armatur',
     'issue.installation': 'Neuinstallation',
-    
+
     // Severity
     'severity.1': 'Gering',
     'severity.2': 'Mäßig',
     'severity.3': 'Erheblich',
     'severity.4': 'Schwer',
     'severity.5': 'Notfall',
-    
+
     // Form
     'form.name': 'Vollständiger Name',
     'form.phone': 'Telefonnummer',
     'form.email': 'E-Mail-Adresse',
     'form.address': 'Adresse',
-    
+
     // Gallery
     'gallery.title': 'Vorher & Nachher',
     'gallery.subtitle': 'Sehen Sie die Qualität unserer Meisterarbeit',
     'gallery.cta': 'Diagnose starten',
-    
+
     // Testimonials
     'testimonials.title': 'Kundenstimmen',
     'testimonials.verified': 'Verifizierter Kunde',
-    
+
     // Trust
     'trust.title': 'Von Tausenden vertraut',
     'trust.response': '30 Min. durchschnittliche Reaktionszeit',
     'trust.certified': 'Zertifizierte Techniker',
     'trust.guarantee': 'Zufriedenheitsgarantie',
     'trust.insurance': 'Vollversichert',
-    
+
     // Features Section
     'features.badge': 'Warum wir',
     'features.title': 'Warum Rohr-Blitz wählen?',
     'features.subtitle': 'Wir kombinieren echtes Handwerk mit modernen Diagnose-Tools für schnellere, genauere und kostengünstigere Lösungen.',
     'features.painPoint': 'Das Problem',
     'features.solution': 'Unsere Lösung',
-    
-    // AI Diagnosis Pillar
-    'features.ai-diagnosis.title': 'Visuelle Meister-Diagnose',
-    'features.ai-diagnosis.tagline': 'Sofortige Problemerkennung mit Reparaturanleitung',
-    'features.ai-diagnosis.pain': 'Herkömmliche Inspektionen erfordern Terminvereinbarung, Warten und Bezahlung nur für die Diagnose.',
-    'features.ai-diagnosis.solution': 'Unsere Meister analysieren Ihr Foto in Sekunden, identifizieren das Problem und liefern eine detaillierte Aufschlüsselung der Reparatur.',
-    'features.ai-diagnosis.benefit1': 'Erkennt 50+ häufige Sanitärprobleme aus einem Foto',
-    'features.ai-diagnosis.benefit2': 'Listet benötigte Teile mit Modellnummern zum Preisvergleich',
-    'features.ai-diagnosis.benefit3': 'Gibt Schwierigkeitsgrad an: DIY oder Profi erforderlich',
-    
+
+    // Master Diagnosis Pillar
+    'features.expert-diagnosis.title': 'Visuelle Meister-Diagnose',
+    'features.expert-diagnosis.tagline': 'Sofortige Problemerkennung mit Reparaturanleitung',
+    'features.expert-diagnosis.pain': 'Herkömmliche Inspektionen erfordern Terminvereinbarung, Warten und Bezahlung nur für die Diagnose.',
+    'features.expert-diagnosis.solution': 'Unsere Meister analysieren Ihr Foto in Sekunden, identifizieren das Problem und liefern eine detaillierte Aufschlüsselung der Reparatur.',
+    'features.expert-diagnosis.benefit1': 'Erkennt 50+ häufige Sanitärprobleme aus einem Foto',
+    'features.expert-diagnosis.benefit2': 'Listet benötigte Teile mit Modellnummern zum Preisvergleich',
+    'features.expert-diagnosis.benefit3': 'Gibt Schwierigkeitsgrad an: DIY oder Profi erforderlich',
+
     // Time & Cost Pillar
     'features.time-cost.title': 'Zeit- & Kostenersparnis',
     'features.time-cost.tagline': 'Keine verschwendete Zeit oder überraschende Rechnungen',
@@ -228,7 +228,7 @@ const translations: Record<Language, Record<string, string>> = {
     'features.time-cost.benefit1': 'Durchschnittlich 40% günstiger als traditionelle Notrufe',
     'features.time-cost.benefit2': 'Transparente Preise ohne versteckte Gebühren',
     'features.time-cost.benefit3': 'Keine Diagnosegebühr dank Remote-Voranalyse',
-    
+
     // Reliability Pillar
     'features.reliability.title': 'Zuverlässigkeit & Support',
     'features.reliability.tagline': '24/7 Verfügbarkeit mit Arbeitsgarantie',
@@ -237,20 +237,20 @@ const translations: Record<Language, Record<string, string>> = {
     'features.reliability.benefit1': '30 Minuten durchschnittliche Reaktionszeit bei Notfällen',
     'features.reliability.benefit2': '2 Jahre Garantie auf alle Reparaturen',
     'features.reliability.benefit3': 'Überprüfte, lizenzierte und vollversicherte Techniker',
-    
-    // AI Deep Dive
+
+    // Master Deep Dive
     'features.howItWorks': 'So funktioniert\'s',
     'features.learnMore': 'Mehr erfahren',
-    'features.aiDeepDive.title': 'Vom Foto zur Reparatur in 4 Schritten',
-    'features.aiDeepDive.step1.title': 'Foto machen',
-    'features.aiDeepDive.step1.desc': 'Fotografieren Sie das Leck, die Verstopfung oder die beschädigte Armatur. Funktioniert mit jedem Smartphone.',
-    'features.aiDeepDive.step2.title': 'Meister-Analyse',
-    'features.aiDeepDive.step2.desc': 'Unsere Meister analysieren das Bild, vergleichen mit tausenden Fällen und identifizieren Problem und Schweregrad.',
-    'features.aiDeepDive.step3.title': 'Detaillierter Bericht',
-    'features.aiDeepDive.step3.desc': 'Erhalten Sie eine Aufschlüsselung des Problems, benötigte Teile, geschätzte Reparaturzeit und Kostenspanne.',
-    'features.aiDeepDive.step4.title': 'Reparatur',
-    'features.aiDeepDive.step4.desc': 'Buchen Sie einen Techniker, der mit den richtigen Werkzeugen ankommt, oder reparieren Sie selbst mit unserer Anleitung.',
-    
+    'features.masterDeepDive.title': 'Vom Foto zur Reparatur in 4 Schritten',
+    'features.masterDeepDive.step1.title': 'Foto machen',
+    'features.masterDeepDive.step1.desc': 'Fotografieren Sie das Leck, die Verstopfung oder die beschädigte Armatur. Funktioniert mit jedem Smartphone.',
+    'features.masterDeepDive.step2.title': 'Meister-Analyse',
+    'features.masterDeepDive.step2.desc': 'Unsere Meister analysieren das Bild, vergleichen mit tausenden Fällen und identifizieren Problem und Schweregrad.',
+    'features.masterDeepDive.step3.title': 'Detaillierter Bericht',
+    'features.masterDeepDive.step3.desc': 'Erhalten Sie eine Aufschlüsselung des Problems, benötigte Teile, geschätzte Reparaturzeit und Kostenspanne.',
+    'features.masterDeepDive.step4.title': 'Reparatur',
+    'features.masterDeepDive.step4.desc': 'Buchen Sie einen Techniker, der mit den richtigen Werkzeugen ankommt, oder reparieren Sie selbst mit unserer Anleitung.',
+
     // Results Stats
     'features.results.title': 'Echte Ergebnisse, echte Ersparnisse',
     'features.results.diagnosis': 'Durchschn. Diagnosezeit',
@@ -259,7 +259,7 @@ const translations: Record<Language, Record<string, string>> = {
     'features.results.satisfaction': 'Kundenbewertung',
     'features.cta': 'Meister-Diagnose kostenlos testen',
     'features.ctaSubtext': 'Keine Kreditkarte erforderlich. Schätzung in unter 5 Minuten.',
-    
+
     // Pricing
     'pricing.title': 'Transparente Preise',
     'pricing.subtitle': 'Keine versteckten Gebühren',
@@ -269,10 +269,10 @@ const translations: Record<Language, Record<string, string>> = {
     'pricing.cta': 'Plan wählen',
     'pricing.popular': 'Beliebteste',
     'pricing.month': 'Monat',
-    
+
     // FAQ
     'faq.title': 'Häufig gestellte Fragen',
-    
+
     // Footer
     'footer.cta': 'Jetzt starten',
     'footer.contact': 'Kontakt',
