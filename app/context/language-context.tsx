@@ -17,9 +17,9 @@ const translations: Record<Language, Record<string, string>> = {
     'header.logo': 'Rohr-Blitz',
 
     // Hero
-    'hero.badge': 'Master Expert Diagnosis',
-    'hero.title': 'Bespoke Plumbing Diagnosis & Expert Engineering',
-    'hero.subtitle': 'Experience the future of home maintenance. Instant visual diagnostic analysis by certified German Master Technicians. Transparent, elite, and available 24/7.',
+    'hero.badge': 'Local emergency plumber',
+    'hero.title': 'Burst pipe? Blocked drain? We fix it today.',
+    'hero.subtitle': 'A small team of experienced plumbers for Berlin and surrounding areas. We arrive quickly, give clear prices before we start, and leave your home clean again.',
 
     // Diagnostic Funnel
     'funnel.step1.title': 'Upload Photo',
@@ -70,51 +70,49 @@ const translations: Record<Language, Record<string, string>> = {
     'trust.insurance': 'Fully Insured',
 
     // Features Section
-    'features.badge': 'Why Choose Us',
-    'features.title': 'Why Choose Rohr-Blitz?',
-    'features.subtitle': 'We combine expert craftsmanship with modern diagnostic tools to deliver faster, more accurate, and cost-effective solutions.',
+    'features.badge': 'Our services',
+    'features.title': 'What we help you with',
+    'features.subtitle': 'From leaking pipes to complete bathroom repairs – we solve everyday plumbing problems quickly and without drama.',
     'features.painPoint': 'The Problem',
     'features.solution': 'Our Solution',
 
-    // Master Diagnosis Pillar
-    'features.expert-diagnosis.title': 'Master Visual Diagnosis',
-    'features.expert-diagnosis.tagline': 'Instant issue identification with repair guidance',
-    'features.expert-diagnosis.pain': 'Traditional plumbing inspections require scheduling, waiting for a technician, and paying for diagnostic visits just to understand the problem.',
-    'features.expert-diagnosis.solution': 'Our master technicians analyze your photo in seconds, identify the exact issue, and provide a detailed breakdown of required repairs, tools, and parts.',
-    'features.expert-diagnosis.benefit1': 'Identifies 50+ common plumbing issues from a single photo',
-    'features.expert-diagnosis.benefit2': 'Lists exact parts needed (with model numbers) so you can price-compare',
-    'features.expert-diagnosis.benefit3': 'Provides difficulty rating so you know if it\'s DIY or requires a pro',
+    // Services Pillars (renamed but keep keys)
+    'features.expert-diagnosis.title': 'Typical emergencies we handle',
+    'features.expert-diagnosis.tagline': 'Quick help when something suddenly breaks',
+    'features.expert-diagnosis.pain': 'Water running where it should not, toilet not flushing, or a drain that simply will not empty – most problems start small and suddenly become urgent.',
+    'features.expert-diagnosis.solution': 'You call us, tell us in a few words what happened, and we send a plumber who is used to exactly these everyday emergencies.',
+    'features.expert-diagnosis.benefit1': 'Leaking pipes, dripping taps and burst flexible hoses',
+    'features.expert-diagnosis.benefit2': 'Blocked toilets, showers and kitchen sinks',
+    'features.expert-diagnosis.benefit3': 'No water pressure, cold water only or strange noises',
 
-    // Time & Cost Pillar
-    'features.time-cost.title': 'Time & Cost Savings',
-    'features.time-cost.tagline': 'No wasted hours or surprise invoices',
-    'features.time-cost.pain': 'Emergency plumber calls average $150-300 just for showing up, plus hourly rates and markup on parts.',
-    'features.time-cost.solution': 'Get an upfront estimate before any technician arrives. Know the exact cost range, timeline, and what you\'re paying for.',
-    'features.time-cost.benefit1': 'Save 40% on average vs. traditional emergency call-outs',
-    'features.time-cost.benefit2': 'Transparent pricing with no hidden fees or surprise charges',
-    'features.time-cost.benefit3': 'Skip the diagnostic fee entirely with our remote pre-assessment',
+    'features.time-cost.title': 'Clear prices before we start',
+    'features.time-cost.tagline': 'You always know what it will roughly cost',
+    'features.time-cost.pain': 'Many people are afraid of calling a plumber because they have heard stories about huge bills after the work is done.',
+    'features.time-cost.solution': 'On the phone we ask a few simple questions and give you a realistic price range. On site we explain again what we plan to do and what it will cost.',
+    'features.time-cost.benefit1': 'Arrival, labour and material explained in plain language',
+    'features.time-cost.benefit2': 'No work without your agreement to the price range',
+    'features.time-cost.benefit3': 'If something unexpected appears, we talk to you first',
 
-    // Reliability Pillar
-    'features.reliability.title': 'Reliability & Support',
-    'features.reliability.tagline': '24/7 availability with guaranteed workmanship',
-    'features.reliability.pain': 'Most plumbers are booked days out, and weekend or night calls cost double. Warranties are often unclear or non-existent.',
-    'features.reliability.solution': 'Our network of 50+ certified technicians ensures same-day availability. Every job includes a 2-year workmanship guarantee.',
-    'features.reliability.benefit1': '30-minute average response time for emergencies',
-    'features.reliability.benefit2': '2-year warranty on all repairs with no fine print',
-    'features.reliability.benefit3': 'Background-checked, licensed, and fully insured technicians',
+    'features.reliability.title': 'Reliable small team',
+    'features.reliability.tagline': 'The same faces, not a call centre',
+    'features.reliability.pain': 'Online platforms often send changing subcontractors that you never see again.',
+    'features.reliability.solution': 'With Rohr-Blitz you speak directly to our own plumbers. We plan the jobs ourselves and come with our own tools and materials.',
+    'features.reliability.benefit1': 'Fixed contact persons who know your flat or house',
+    'features.reliability.benefit2': 'We arrive on time or call if we are running late',
+    'features.reliability.benefit3': 'We protect floors and furniture and clean up afterwards',
 
-    // Master Deep Dive
-    'features.howItWorks': 'How It Works',
-    'features.learnMore': 'Learn more',
-    'features.masterDeepDive.title': 'From Photo to Fixed in 4 Simple Steps',
-    'features.masterDeepDive.step1.title': 'Visual Capture',
-    'features.masterDeepDive.step1.desc': 'Capture a high-fidelity image of the disruption. Our expert technicians process the details of the issue instantly.',
-    'features.masterDeepDive.step2.title': 'Master Validation',
-    'features.masterDeepDive.step2.desc': 'Our Master Technicians validate the diagnostic data, ensuring engineering-grade accuracy and localized compliance.',
-    'features.masterDeepDive.step3.title': 'Detailed Report',
-    'features.masterDeepDive.step3.desc': 'Receive a breakdown of the problem, required parts, estimated repair time, and cost range.',
-    'features.masterDeepDive.step4.title': 'Elite Resolution',
-    'features.masterDeepDive.step4.desc': 'Deploy a certified Master Technician who arrives fully equipped to solve the disruption with surgical precision.',
+    // Simple process explanation
+    'features.howItWorks': 'How a visit works',
+    'features.learnMore': 'More about our team',
+    'features.masterDeepDive.title': 'From phone call to finished job',
+    'features.masterDeepDive.step1.title': 'You call or send a message',
+    'features.masterDeepDive.step1.desc': 'You briefly describe the problem and, if you like, send us a photo via email or messenger.',
+    'features.masterDeepDive.step2.title': 'We give you a time and price frame',
+    'features.masterDeepDive.step2.desc': 'We tell you when we can come and what it will roughly cost, including arrival and material.',
+    'features.masterDeepDive.step3.title': 'We repair on site',
+    'features.masterDeepDive.step3.desc': 'Our plumber checks everything again, explains the options and then repairs the damage.',
+    'features.masterDeepDive.step4.title': 'You get a clean bathroom back',
+    'features.masterDeepDive.step4.desc': 'We test everything with you, write the invoice and take the rubbish with us.',
 
     // Results Stats
     'features.results.title': 'Real Results, Real Savings',
@@ -126,8 +124,8 @@ const translations: Record<Language, Record<string, string>> = {
     'features.ctaSubtext': 'No credit card required. Get your estimate in under 5 minutes.',
 
     // Pricing
-    'pricing.title': 'Transparent Pricing',
-    'pricing.subtitle': 'No hidden fees, no surprises',
+    'pricing.title': 'Prices that make sense',
+    'pricing.subtitle': 'Fair, clear and explained before we start',
     'pricing.basic': 'Basic',
     'pricing.standard': 'Standard',
     'pricing.premium': 'Premium',
@@ -136,10 +134,12 @@ const translations: Record<Language, Record<string, string>> = {
     'pricing.month': 'month',
 
     // FAQ
-    'faq.title': 'Frequently Asked Questions',
+    'faq.title': 'Questions we hear a lot',
+    'faq.cta': 'Ask a question',
+    'faq.moreHelpTitle': "Can't find what you need?",
 
     // Footer
-    'footer.cta': 'Get Started Now',
+    'footer.cta': 'Request a plumber now',
     'footer.contact': 'Contact Us',
     'footer.legal': 'Legal',
     'footer.privacy': 'Privacy Policy',
@@ -152,9 +152,9 @@ const translations: Record<Language, Record<string, string>> = {
     'header.logo': 'Rohr-Blitz',
 
     // Hero
-    'hero.badge': 'Meister-Diagnose',
-    'hero.title': 'Meisterhafte Präzision & Digitale Sanitär-Diagnostik',
-    'hero.subtitle': 'Erleben Sie die Zukunft der Haustechnik. Visuelle Sofort-Analyse durch zertifizierte deutsche Handwerksmeister. Transparent, exzellent und 24/7 verfügbar.',
+    'hero.badge': 'Lokaler Sanitär-Notdienst',
+    'hero.title': 'Rohrbruch? Toilette verstopft? Wir kommen heute noch.',
+    'hero.subtitle': 'Kleines eingespieltes Team aus erfahrenen Installateuren in Berlin und Umgebung. Wir kommen schnell, sprechen Preise offen an und hinterlassen alles sauber.',
 
     // Diagnostic Funnel
     'funnel.step1.title': 'Foto hochladen',
@@ -205,51 +205,49 @@ const translations: Record<Language, Record<string, string>> = {
     'trust.insurance': 'Vollversichert',
 
     // Features Section
-    'features.badge': 'Warum wir',
-    'features.title': 'Warum Rohr-Blitz wählen?',
-    'features.subtitle': 'Wir kombinieren echtes Handwerk mit modernen Diagnose-Tools für schnellere, genauere und kostengünstigere Lösungen.',
+    'features.badge': 'Unsere Leistungen',
+    'features.title': 'Wobei wir Ihnen helfen',
+    'features.subtitle': 'Von der tropfenden Armatur bis zum vollgelaufenen Keller – wir lösen typische Sanitärprobleme zuverlässig und ohne großes Theater.',
     'features.painPoint': 'Das Problem',
     'features.solution': 'Unsere Lösung',
 
-    // Master Diagnosis Pillar
-    'features.expert-diagnosis.title': 'Visuelle Meister-Diagnose',
-    'features.expert-diagnosis.tagline': 'Sofortige Problemerkennung mit Reparaturanleitung',
-    'features.expert-diagnosis.pain': 'Herkömmliche Inspektionen erfordern Terminvereinbarung, Warten und Bezahlung nur für die Diagnose.',
-    'features.expert-diagnosis.solution': 'Unsere Meister analysieren Ihr Foto in Sekunden, identifizieren das Problem und liefern eine detaillierte Aufschlüsselung der Reparatur.',
-    'features.expert-diagnosis.benefit1': 'Erkennt 50+ häufige Sanitärprobleme aus einem Foto',
-    'features.expert-diagnosis.benefit2': 'Listet benötigte Teile mit Modellnummern zum Preisvergleich',
-    'features.expert-diagnosis.benefit3': 'Gibt Schwierigkeitsgrad an: DIY oder Profi erforderlich',
+    // Services Pillars (renamed but keep keys)
+    'features.expert-diagnosis.title': 'Typische Notfälle, die wir lösen',
+    'features.expert-diagnosis.tagline': 'Schnelle Hilfe, wenn etwas plötzlich kaputtgeht',
+    'features.expert-diagnosis.pain': 'Wasser läuft, wo es nicht soll, die Toilette spült nicht mehr oder der Abfluss ist komplett dicht – die meisten Probleme kommen plötzlich.',
+    'features.expert-diagnosis.solution': 'Sie rufen an, schildern kurz die Situation, und wir schicken einen Monteur, der diese Alltagseinsätze gewohnt ist.',
+    'features.expert-diagnosis.benefit1': 'Undichte Leitungen, tropfende Hähne und geplatzte Schläuche',
+    'features.expert-diagnosis.benefit2': 'Verstopfte Toiletten, Duschen und Spülen',
+    'features.expert-diagnosis.benefit3': 'Probleme mit Wasserdruck, Temperatur oder Geräuschen',
 
-    // Time & Cost Pillar
-    'features.time-cost.title': 'Zeit- & Kostenersparnis',
-    'features.time-cost.tagline': 'Keine verschwendete Zeit oder überraschende Rechnungen',
-    'features.time-cost.pain': 'Notfall-Klempner kosten 150-300€ nur fürs Erscheinen, plus Stundensätze und Materialaufschläge.',
-    'features.time-cost.solution': 'Erhalten Sie einen Kostenvoranschlag, bevor ein Techniker kommt. Keine versteckten Kosten.',
-    'features.time-cost.benefit1': 'Durchschnittlich 40% günstiger als traditionelle Notrufe',
-    'features.time-cost.benefit2': 'Transparente Preise ohne versteckte Gebühren',
-    'features.time-cost.benefit3': 'Keine Diagnosegebühr dank Remote-Voranalyse',
+    'features.time-cost.title': 'Klare Preise vor Arbeitsbeginn',
+    'features.time-cost.tagline': 'Sie wissen vorher, womit Sie rechnen müssen',
+    'features.time-cost.pain': 'Viele trauen sich nicht, den Klempner zu rufen, weil sie Angst vor einer hohen Rechnung im Nachhinein haben.',
+    'features.time-cost.solution': 'Am Telefon stellen wir ein paar einfache Fragen und nennen eine realistische Preisspanne. Vor Ort erklären wir noch einmal, was gemacht wird und was es kostet.',
+    'features.time-cost.benefit1': 'Anfahrt, Arbeit und Material verständlich erklärt',
+    'features.time-cost.benefit2': 'Keine Arbeiten ohne Ihr Okay zum Kostenrahmen',
+    'features.time-cost.benefit3': 'Bei unerwarteten Zusatzarbeiten sprechen wir zuerst mit Ihnen',
 
-    // Reliability Pillar
-    'features.reliability.title': 'Zuverlässigkeit & Support',
-    'features.reliability.tagline': '24/7 Verfügbarkeit mit Arbeitsgarantie',
-    'features.reliability.pain': 'Die meisten Klempner sind Tage ausgebucht, Wochenend- oder Nachteinsätze kosten das Doppelte.',
-    'features.reliability.solution': 'Unser Netzwerk von 50+ zertifizierten Technikern garantiert Verfügbarkeit am selben Tag.',
-    'features.reliability.benefit1': '30 Minuten durchschnittliche Reaktionszeit bei Notfällen',
-    'features.reliability.benefit2': '2 Jahre Garantie auf alle Reparaturen',
-    'features.reliability.benefit3': 'Überprüfte, lizenzierte und vollversicherte Techniker',
+    'features.reliability.title': 'Zuverlässiges kleines Team',
+    'features.reliability.tagline': 'Bekannte Gesichter statt Callcenter',
+    'features.reliability.pain': 'Online-Plattformen schicken oft ständig wechselnde Subunternehmer, die man nie wieder sieht.',
+    'features.reliability.solution': 'Bei Rohr-Blitz sprechen Sie direkt mit unseren eigenen Monteuren. Wir planen die Einsätze selbst und kommen mit eigenem Werkzeug und Material.',
+    'features.reliability.benefit1': 'Feste Ansprechpartner, die Ihre Wohnung oder Ihr Haus kennen',
+    'features.reliability.benefit2': 'Wir kommen pünktlich oder melden uns bei Verzögerung',
+    'features.reliability.benefit3': 'Wir schützen Böden und Möbel und räumen danach auf',
 
-    // Master Deep Dive
-    'features.howItWorks': 'So funktioniert\'s',
-    'features.learnMore': 'Mehr erfahren',
-    'features.masterDeepDive.title': 'Vom Foto zur Reparatur in 4 Schritten',
-    'features.masterDeepDive.step1.title': 'Foto machen',
-    'features.masterDeepDive.step1.desc': 'Fotografieren Sie das Leck, die Verstopfung oder die beschädigte Armatur. Funktioniert mit jedem Smartphone.',
-    'features.masterDeepDive.step2.title': 'Meister-Analyse',
-    'features.masterDeepDive.step2.desc': 'Unsere Meister analysieren das Bild, vergleichen mit tausenden Fällen und identifizieren Problem und Schweregrad.',
-    'features.masterDeepDive.step3.title': 'Detaillierter Bericht',
-    'features.masterDeepDive.step3.desc': 'Erhalten Sie eine Aufschlüsselung des Problems, benötigte Teile, geschätzte Reparaturzeit und Kostenspanne.',
-    'features.masterDeepDive.step4.title': 'Reparatur',
-    'features.masterDeepDive.step4.desc': 'Buchen Sie einen Techniker, der mit den richtigen Werkzeugen ankommt, oder reparieren Sie selbst mit unserer Anleitung.',
+    // Simple process explanation
+    'features.howItWorks': 'So läuft ein Einsatz ab',
+    'features.learnMore': 'Mehr über unser Team',
+    'features.masterDeepDive.title': 'Vom Anruf bis zur sauberen Übergabe',
+    'features.masterDeepDive.step1.title': 'Sie rufen an oder schreiben',
+    'features.masterDeepDive.step1.desc': 'Sie schildern kurz das Problem und können uns auf Wunsch ein Foto schicken.',
+    'features.masterDeepDive.step2.title': 'Wir nennen Zeit und groben Preis',
+    'features.masterDeepDive.step2.desc': 'Wir sagen, wann wir kommen können und mit welchen Kosten Sie ungefähr rechnen müssen – inklusive Anfahrt.',
+    'features.masterDeepDive.step3.title': 'Reparatur vor Ort',
+    'features.masterDeepDive.step3.desc': 'Unser Monteur prüft alles, erklärt Ihnen die Schritte und behebt den Schaden.',
+    'features.masterDeepDive.step4.title': 'Gemeinsame Kontrolle & Rechnung',
+    'features.masterDeepDive.step4.desc': 'Wir testen alles gemeinsam, stellen die Rechnung aus und nehmen Verpackung und Altteile mit.',
 
     // Results Stats
     'features.results.title': 'Echte Ergebnisse, echte Ersparnisse',
@@ -261,8 +259,8 @@ const translations: Record<Language, Record<string, string>> = {
     'features.ctaSubtext': 'Keine Kreditkarte erforderlich. Schätzung in unter 5 Minuten.',
 
     // Pricing
-    'pricing.title': 'Transparente Preise',
-    'pricing.subtitle': 'Keine versteckten Gebühren',
+    'pricing.title': 'Preise, die nachvollziehbar sind',
+    'pricing.subtitle': 'Fair, offen kommuniziert und ohne versteckte Kosten',
     'pricing.basic': 'Basis',
     'pricing.standard': 'Standard',
     'pricing.premium': 'Premium',
@@ -271,10 +269,12 @@ const translations: Record<Language, Record<string, string>> = {
     'pricing.month': 'Monat',
 
     // FAQ
-    'faq.title': 'Häufig gestellte Fragen',
+    'faq.title': 'Fragen, die uns oft gestellt werden',
+    'faq.cta': 'Frage stellen',
+    'faq.moreHelpTitle': 'Nicht das Richtige gefunden?',
 
     // Footer
-    'footer.cta': 'Jetzt starten',
+    'footer.cta': 'Jetzt Klempner anfragen',
     'footer.contact': 'Kontakt',
     'footer.legal': 'Rechtliches',
     'footer.privacy': 'Datenschutz',

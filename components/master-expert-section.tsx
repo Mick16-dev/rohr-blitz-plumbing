@@ -41,27 +41,29 @@ export function MasterExpertSection() {
             className="space-y-8"
           >
             <div className="space-y-4">
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 text-secondary text-xs font-black rounded-xl uppercase tracking-[0.2em]">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 text-secondary text-xs font-semibold rounded-xl uppercase tracking-[0.15em]">
                 <ShieldCheck className="w-4 h-4" />
-                {language === 'de' ? 'Ihr Rohr‑Blitz Team' : 'Your Rohr-Blitz Team'}
+                {language === 'de' ? 'Das Team hinter Rohr-Blitz' : 'The team behind Rohr-Blitz'}
               </span>
-              <h2 className="text-4xl sm:text-6xl font-black text-foreground tracking-tighter italic uppercase leading-[1.1]">
-                {language === 'de' ? 'Menschen, die Ihr Zuhause schützen.' : 'People who protect your home.'}
+              <h2 className="text-4xl sm:text-5xl font-bold text-foreground tracking-tight leading-[1.1]">
+                {language === 'de'
+                  ? 'Wir sind keine Plattform, sondern Ihr fester Klempnerbetrieb.'
+                  : 'We are not a platform, we are your local plumbing team.'}
               </h2>
             </div>
 
-            <p className="text-xl text-muted-foreground font-medium leading-relaxed italic">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               {language === 'de'
-                ? 'Hinter jedem Einsatz steht ein kleines, eingespieltes Team aus Meister-Installateuren. Wir kennen unsere Kunden beim Namen, kommen pünktlich und verlassen Ihr Zuhause so sauber, wie wir es vorgefunden haben.'
-                : 'Behind every call-out is a tight-knit crew of master plumbers who know you by name, show up on time, and leave your home as clean as they found it.'}
+                ? 'Hinter jedem Einsatz stehen echte Menschen aus der Region. Wir kommen selbst, hören zu, erklären in Ruhe und machen erst dann weiter, wenn Sie verstanden haben, was wir tun.'
+                : 'Every job is carried out by the same small team. We come ourselves, listen first, explain in simple words and only start once you are happy with the plan.'}
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6">
                 {[
-                  { icon: Award, labelDe: 'Über 20 Jahre Erfahrung vor Ort', labelEn: '20+ years local experience' },
-                  { icon: GraduationCap, labelDe: 'Regelmäßige Schulungen & Zertifikate', labelEn: 'Ongoing training & certifications' },
-                  { icon: Microscope, labelDe: 'Sorgfältige Diagnose statt Schnellschuss', labelEn: 'Careful diagnosis, not guesswork' },
-                  { icon: ShieldCheck, labelDe: 'Saubere Arbeit & Haftungs-Garantie', labelEn: 'Clean workmanship & liability cover' },
+                  { icon: Award, labelDe: 'Seit vielen Jahren als Sanitärbetrieb in der Region unterwegs', labelEn: 'Many years of plumbing experience in this region' },
+                  { icon: GraduationCap, labelDe: 'Ausbildung im Handwerk statt anonymer Plattform', labelEn: 'Trained craftsmen, not anonymous platform workers' },
+                  { icon: Microscope, labelDe: 'Wir erklären Probleme so, dass Sie sie wirklich verstehen', labelEn: 'We explain problems so you really understand them' },
+                  { icon: ShieldCheck, labelDe: 'Wir verlassen Bad und Küche sauber und aufgeräumt', labelEn: 'We leave bathrooms and kitchens clean and tidy' },
                 ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 bg-card/30 p-4 rounded-2xl border border-white/40">
                   <item.icon className="w-5 h-5 text-secondary" />

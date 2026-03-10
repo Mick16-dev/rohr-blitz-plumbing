@@ -98,25 +98,29 @@ export function TestimonialsSection() {
           viewport={{ once: true }}
           className="text-center mb-24"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-success/10 text-success text-xs font-black rounded-xl uppercase tracking-[0.2em] mb-6">
+          <span className="inline-flex items-center gap-2 px-4 py-2 bg-success/10 text-success text-xs font-semibold rounded-xl uppercase tracking-[0.15em] mb-6">
             <UserCheck className="w-4 h-4" />
-            Verified Elite Reviews
+            {language === 'de' ? 'Erfahrungen von Kunden' : 'What customers tell us'}
           </span>
-          <h2 className="text-4xl sm:text-6xl font-black text-foreground mb-8 tracking-tighter italic uppercase underline decoration-success decoration-8 underline-offset-8">
+          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 tracking-tight">
             {t('testimonials.title')}
           </h2>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 text-muted-foreground bg-muted/30 p-8 rounded-[2rem] border border-border/50 max-w-3xl mx-auto backdrop-blur-sm">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 text-muted-foreground bg-muted/30 p-6 rounded-2xl border border-border/50 max-w-3xl mx-auto">
             <div className="flex flex-col items-center gap-2">
                <div className="flex items-center gap-1">
                  <StarRating rating={5} />
                  <span className="font-black text-foreground text-2xl tracking-tighter italic ml-2">4.9/5</span>
                </div>
-               <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground/60">Global Satisfaction Score</span>
+               <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground/60">
+                 {language === 'de' ? 'Durchschnittliche Bewertung' : 'Average rating'}
+               </span>
             </div>
             <div className="w-px h-12 bg-border hidden sm:block" />
             <div className="flex flex-col items-center gap-2">
-               <span className="font-black text-foreground text-2xl tracking-tighter italic uppercase text-secondary">500+</span>
-               <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground/60">Verified Cases Resolved</span>
+               <span className="font-semibold text-foreground text-2xl tracking-tight text-secondary">500+</span>
+               <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground/60">
+                 {language === 'de' ? 'Einsätze pro Jahr' : 'Jobs per year'}
+               </span>
             </div>
           </div>
         </motion.div>
