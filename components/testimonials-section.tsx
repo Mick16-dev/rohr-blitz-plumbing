@@ -26,8 +26,8 @@ const testimonials = [
     locationEn: 'Munich',
     locationDe: 'München',
     rating: 5,
-    textEn: 'The expert diagnosis tool gave me an accurate estimate before they even arrived. No surprises with the final bill. Great service!',
-    textDe: 'Das Experten-Diagnose-Tool gab mir eine genaue Schätzung, bevor sie überhaupt ankamen. Keine Überraschungen bei der Endabrechnung. Toller Service!',
+    textEn: 'They explained the costs very clearly on the phone and stuck to it on site. No unpleasant surprises on the invoice.',
+    textDe: 'Die Kosten wurden am Telefon sehr klar erklärt und vor Ort eingehalten. Keine unangenehmen Überraschungen auf der Rechnung.',
     avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face',
     hasVideo: false
   },
@@ -50,8 +50,8 @@ const testimonials = [
     locationEn: 'Frankfurt',
     locationDe: 'Frankfurt',
     rating: 5,
-    textEn: 'Signed up for the maintenance plan. They come quarterly and have prevented two potential emergencies already.',
-    textDe: 'Habe den Wartungsplan abgeschlossen. Sie kommen vierteljährlich und haben bereits zwei potenzielle Notfälle verhindert.',
+    textEn: 'They came the same day because our only toilet was blocked. Fast, friendly and they left everything clean.',
+    textDe: 'Sie kamen noch am selben Tag, weil unsere einzige Toilette verstopft war. Schnell, freundlich und alles sauber hinterlassen.',
     avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
     hasVideo: false
   }

@@ -3,73 +3,36 @@
 import { useLanguage } from '@/app/context/language-context'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
-import { Magnetic } from '@/components/ui/magnetic'
-import { Check, ShieldCheck, Clock, Crown, MapPin } from 'lucide-react'
+import { ShieldCheck, Wrench, Droplet, CircleOff, Clock } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
-const plans = [
+const jobs = [
   {
-    id: 'basic',
-    nameKey: 'pricing.basic',
-    price: 99,
-    icon: ShieldCheck,
-    featuresEn: [
-      'Standard response time (2-4 hours)',
-      'Basic diagnostics',
-      'Email support',
-      'Standard parts warranty'
-    ],
-    featuresDe: [
-      'Standard-Reaktionszeit (2-4 Stunden)',
-      'Basis-Diagnose',
-      'E-Mail-Support',
-      'Standard-Teile-Garantie'
-    ],
-    popular: false
+    id: 'drain',
+    icon: CircleOff,
+    titleEn: 'Blocked toilet or drain',
+    titleDe: 'Verstopfte Toilette oder Abfluss',
+    fromPrice: 89,
+    descEn: 'Includes arrival, simple unblocking and short function test.',
+    descDe: 'Inklusive Anfahrt, einfacher Rohrreinigung und kurzem Funktionstest.'
   },
   {
-    id: 'standard',
-    nameKey: 'pricing.standard',
-    price: 199,
+    id: 'leak',
+    icon: Droplet,
+    titleEn: 'Leak under sink or basin',
+    titleDe: 'Leck unter Spüle oder Waschbecken',
+    fromPrice: 99,
+    descEn: 'Finding and sealing simple leaks on accessible pipework.',
+    descDe: 'Auffinden und Abdichten einfacher Leckagen an zugänglichen Leitungen.'
+  },
+  {
+    id: 'emergency',
     icon: Clock,
-    featuresEn: [
-      'Priority response (under 1 hour)',
-      'Master digital diagnostics',
-      '24/7 phone support',
-      'Extended parts warranty',
-      'Quarterly maintenance check'
-    ],
-    featuresDe: [
-      'Prioritäts-Reaktion (unter 1 Stunde)',
-      'Digitale Meister-Diagnose',
-      '24/7 Telefon-Support',
-      'Erweiterte Teile-Garantie',
-      'Vierteljährliche Wartung'
-    ],
-    popular: true
-  },
-  {
-    id: 'premium',
-    nameKey: 'pricing.premium',
-    price: 399,
-    icon: Crown,
-    featuresEn: [
-      'Emergency priority (under 30 min)',
-      'Advanced master diagnostics + video',
-      'Dedicated account manager',
-      'Lifetime parts warranty',
-      'Monthly preventive maintenance',
-      'Free emergency calls'
-    ],
-    featuresDe: [
-      'Notfall-Priorität (unter 30 Min)',
-      'Erweiterte Meister-Diagnose + Video',
-      'Persönlicher Ansprechpartner',
-      'Lebenslange Teile-Garantie',
-      'Monatliche Prävention',
-      'Kostenlose Notrufe'
-    ],
-    popular: false
+    titleEn: 'Emergency evening visit',
+    titleDe: 'Notdienst am Abend',
+    fromPrice: 149,
+    descEn: 'For acute water damage or complete blockages outside office hours.',
+    descDe: 'Für akute Wasserschäden oder komplette Verstopfungen außerhalb der Bürozeiten.'
   }
 ]
 
@@ -79,19 +42,6 @@ interface PricingSectionProps {
 
 export function PricingSection({ onCtaClick }: PricingSectionProps) {
   const { language, t } = useLanguage()
-
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 }
-    }
-  }
-
-  const item = {
-    hidden: { opacity: 0, scale: 0.95 },
-    show: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }
-  }
 
   return (
     <section className="py-32 px-4 relative overflow-hidden bg-background">
@@ -114,80 +64,43 @@ export function PricingSection({ onCtaClick }: PricingSectionProps) {
           </p>
         </motion.div>
 
-        <motion.div 
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-6 items-start"
-        >
-          {plans.map((plan) => (
-            <motion.div 
-              key={plan.id} 
-              variants={item as any}
-              className={cn(
-                "relative p-6 lg:p-7 rounded-2xl border bg-card text-foreground",
-                plan.popular && "border-secondary"
-              )}
-            >
-              {plan.popular && (
-                <div className="absolute -top-6 left-1/2 -translate-x-1/2 px-6 py-2 bg-secondary text-white text-[10px] font-black uppercase tracking-[0.3em] rounded-2xl shadow-2xl flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 fill-current" />
-                  {t('pricing.popular')}
-                </div>
-              )}
-              
-              <div className="mb-8 text-center">
-                 <div className={cn(
-                   "w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-6",
-                   plan.popular ? "bg-white/10" : "bg-primary/10"
-                 )}>
-                   <plan.icon className={cn("w-7 h-7", plan.popular ? "text-secondary" : "text-primary")} />
-                 </div>
-                 <h3 className="text-xl font-semibold tracking-tight mb-2">
-                    {t(plan.nameKey)}
-                 </h3>
-                 <div className="flex items-baseline justify-center gap-1">
-                   <span className="text-xs font-semibold uppercase tracking-wide opacity-60">EUR</span>
-                   <span className="text-4xl font-bold tracking-tight">{plan.price}</span>
-                   <span className={cn(
-                     "text-xs font-black uppercase tracking-widest",
-                     plan.popular ? "text-white/60" : "text-muted-foreground"
-                   )}>/
-                   {t('pricing.month')}</span>
-                 </div>
-              </div>
-
-              <div className="h-px w-full mb-6 bg-border/60" />
-
-              <ul className="space-y-3 mb-6">
-                {(language === 'de' ? plan.featuresDe : plan.featuresEn).map((feature, i) => (
-                  <li key={i} className="flex items-center gap-4">
-                    <div className={cn(
-                      "w-5 h-5 rounded-full flex items-center justify-center shrink-0",
-                      plan.popular ? "bg-secondary" : "bg-success/20"
-                    )}>
-                      <Check className={cn("w-3 h-3 text-white", !plan.popular && "text-success")} strokeWidth={4} />
-                    </div>
-                    <span className="text-sm font-bold tracking-tight opacity-90">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              <Button 
-                onClick={onCtaClick}
-                className={cn(
-                  "w-full h-12 rounded-xl font-semibold text-sm",
-                  plan.popular 
-                    ? "bg-secondary text-white hover:bg-secondary/90" 
-                    : "bg-primary text-primary-foreground hover:bg-primary/90"
-                )}
+        <div className="grid md:grid-cols-3 gap-6 items-start">
+          {jobs.map((job) => {
+            const title = language === 'de' ? job.titleDe : job.titleEn
+            const desc = language === 'de' ? job.descDe : job.descEn
+            return (
+              <div
+                key={job.id}
+                className="p-6 rounded-2xl border border-border bg-card text-foreground flex flex-col gap-4"
               >
-                {t('pricing.cta')}
-              </Button>
-            </motion.div>
-          ))}
-        </motion.div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <job.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold tracking-tight">{title}</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {desc}
+                </p>
+                <div className="mt-auto flex items-baseline gap-2">
+                  <span className="text-xs uppercase tracking-wide text-muted-foreground">
+                    {language === 'de' ? 'ab' : 'from'}
+                  </span>
+                  <span className="text-2xl font-bold">€{job.fromPrice}</span>
+                  <span className="text-xs text-muted-foreground">
+                    {language === 'de' ? 'inkl. MwSt.' : 'incl. VAT'}
+                  </span>
+                </div>
+                <Button
+                  onClick={onCtaClick}
+                  className="mt-4 w-full h-10 rounded-xl text-sm font-semibold bg-primary text-primary-foreground hover:bg-primary/90"
+                >
+                  {language === 'de' ? 'Rückruf zu diesem Thema' : 'Call back about this'}
+                </Button>
+              </div>
+            )
+          })}
+        </div>
       </div>
     </section>
   )

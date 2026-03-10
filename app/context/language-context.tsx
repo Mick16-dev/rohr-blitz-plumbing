@@ -126,6 +126,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Pricing
     'pricing.title': 'Prices that make sense',
     'pricing.subtitle': 'Fair, clear and explained before we start',
+    // Old plan labels kept only in case they are referenced somewhere else
     'pricing.basic': 'Basic',
     'pricing.standard': 'Standard',
     'pricing.premium': 'Premium',
@@ -152,6 +153,8 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Footer
     'footer.cta': 'Request a plumber now',
+    'footer.lastHeading': 'Need a plumber today?',
+    'footer.lastText': 'Give us a quick call or send a short message and we will tell you when we can come and what it will roughly cost.',
     'footer.contact': 'Contact Us',
     'footer.legal': 'Legal',
     'footer.privacy': 'Privacy Policy',
@@ -273,6 +276,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Pricing
     'pricing.title': 'Preise, die nachvollziehbar sind',
     'pricing.subtitle': 'Fair, offen kommuniziert und ohne versteckte Kosten',
+    // Old plan labels kept only in case they are referenced somewhere else
     'pricing.basic': 'Basis',
     'pricing.standard': 'Standard',
     'pricing.premium': 'Premium',
@@ -299,6 +303,8 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Footer
     'footer.cta': 'Jetzt Klempner anfragen',
+    'footer.lastHeading': 'Brauchen Sie heute noch einen Klempner?',
+    'footer.lastText': 'Rufen Sie kurz an oder schreiben Sie uns, und wir sagen Ihnen, wann wir kommen können und mit welchen Kosten Sie ungefähr rechnen müssen.',
     'footer.contact': 'Kontakt',
     'footer.legal': 'Rechtliches',
     'footer.privacy': 'Datenschutz',
