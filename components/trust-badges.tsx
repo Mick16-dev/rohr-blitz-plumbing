@@ -7,35 +7,35 @@ import { motion } from 'framer-motion'
 const trustItems = [
   {
     icon: Clock,
-    keyEn: 'Average response time',
-    keyDe: 'Durchschn. Reaktionszeit',
-    stat: '15',
+    keyEn: 'Average response time in Berlin',
+    keyDe: 'Durchschnittliche Reaktionszeit in Berlin',
+    stat: '60',
     unit: 'min',
-    color: 'text-amber-400'
+    color: 'text-amber-500'
   },
   {
     icon: Award,
-    keyEn: 'Elite Technicians',
-    keyDe: 'Elite-Techniker',
-    stat: '50+',
+    keyEn: 'Years of plumbing experience',
+    keyDe: 'Jahre Erfahrung im Sanitärbereich',
+    stat: '20+',
     unit: '',
     color: 'text-secondary'
   },
   {
     icon: Shield,
-    keyEn: 'Trust Guarantee',
-    keyDe: 'Vertrauensgarantie',
-    stat: '100%',
-    unit: '',
+    keyEn: 'Repairs with warranty',
+    keyDe: 'Reparaturen mit Gewährleistung',
+    stat: '2',
+    unit: 'yrs',
     color: 'text-success'
   },
   {
     icon: BadgeCheck,
-    keyEn: 'Project Coverage',
-    keyDe: 'Projektabdeckung',
-    stat: '2M',
-    unit: '€',
-    color: 'text-blue-400'
+    keyEn: 'Emergency jobs per year',
+    keyDe: 'Notfälle pro Jahr',
+    stat: '500+',
+    unit: '',
+    color: 'text-blue-500'
   }
 ]
 
@@ -59,25 +59,15 @@ export function TrustBadges() {
   } as any
 
   return (
-    <section className="py-24 px-4 bg-primary relative overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary/50 to-transparent" />
-      <div className="absolute -top-24 -left-24 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
-      <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl" />
-
-      <div className="max-w-7xl mx-auto relative z-10">
+    <section className="py-16 px-4 bg-muted/40">
+      <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="flex flex-col items-center mb-16"
         >
-          <div className="flex items-center gap-2 mb-4">
-            <div className="h-[1px] w-8 bg-secondary" />
-            <span className="text-secondary font-black uppercase tracking-[0.3em] text-[10px]">{t('trust.badge') || "The Gold Standard"}</span>
-            <div className="h-[1px] w-8 bg-secondary" />
-          </div>
-          <h2 className="text-4xl sm:text-5xl font-black text-white text-center italic uppercase tracking-tighter max-w-3xl">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-foreground text-center tracking-tight max-w-3xl">
             {t('trust.title')}
           </h2>
         </motion.div>
@@ -87,40 +77,30 @@ export function TrustBadges() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {trustItems.map((trust, index) => (
             <motion.div
               key={index}
               variants={item}
-              whileHover={{ y: -10, scale: 1.02 }}
-              className="bg-white/5 backdrop-blur-xl rounded-[2rem] p-8 border border-white/10 shadow-2xl group transition-all duration-500 hover:bg-white/10 hover:border-white/20"
+              className="bg-card rounded-xl p-5 border border-border shadow-sm flex flex-col gap-3"
             >
-              <div className="relative mb-8">
-                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-white/20 transition-colors duration-500">
-                  <trust.icon className={`w-8 h-8 ${trust.color} group-hover:scale-110 transition-transform duration-500`} />
-                </div>
-                <motion.div
-                  animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.8, 0.5] }}
-                  transition={{ repeat: Infinity, duration: 4 }}
-                  className="absolute -top-2 -right-2"
-                >
-                  <Award className="w-4 h-4 text-white/30" />
-                </motion.div>
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <trust.icon className={`w-5 h-5 ${trust.color}`} />
               </div>
 
-              <div className="flex items-baseline gap-1 mb-2">
-                <span className="text-5xl font-black text-white tracking-tighter italic font-heading">
+              <div className="flex items-baseline gap-1">
+                <span className="text-2xl font-semibold text-foreground tracking-tight">
                   {trust.stat}
                 </span>
                 {trust.unit && (
-                  <span className="text-xl font-bold text-secondary uppercase tracking-tight">
+                  <span className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
                     {trust.unit}
                   </span>
                 )}
               </div>
 
-              <p className="text-sm font-bold uppercase tracking-widest text-white/50 group-hover:text-white/80 transition-colors">
+              <p className="text-sm text-muted-foreground leading-snug">
                 {language === 'de' ? trust.keyDe : trust.keyEn}
               </p>
             </motion.div>

@@ -38,7 +38,7 @@ function ComparisonSlider({ beforeImage, afterImage, beforeLabel, afterLabel }: 
   return (
     <div
       ref={containerRef}
-      className="relative w-full aspect-[4/5] sm:aspect-[4/3] overflow-hidden rounded-[2rem] cursor-ew-resize select-none border border-white/20 shadow-2xl group"
+      className="relative w-full aspect-[4/5] sm:aspect-[4/3] overflow-hidden rounded-xl cursor-ew-resize select-none border border-border bg-black/5"
       onMouseMove={handleMouseMove}
       onMouseDown={(e) => handleMove(e.clientX)}
       onTouchMove={handleTouchMove}
@@ -61,16 +61,12 @@ function ComparisonSlider({ beforeImage, afterImage, beforeLabel, afterLabel }: 
 
       {/* Slider Line */}
       <div
-        className="absolute top-0 bottom-0 w-1 bg-white/50 backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.5)]"
+        className="absolute top-0 bottom-0 w-0.5 bg-white/70"
         style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
       >
-        <motion.div
-          animate={{ scale: [1, 1.1, 1] }}
-          transition={{ repeat: Infinity, duration: 3 }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white backdrop-blur-xl rounded-2xl shadow-2xl flex items-center justify-center border border-white/50"
-        >
-          <MoveHorizontal className="w-6 h-6 text-primary" />
-        </motion.div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-sm flex items-center justify-center border border-border">
+          <MoveHorizontal className="w-4 h-4 text-primary" />
+        </div>
       </div>
 
       {/* Labels */}
@@ -122,37 +118,34 @@ export function BeforeAfterGallery({ onCtaClick }: BeforeAfterGalleryProps) {
   const { language, t } = useLanguage()
 
   return (
-    <section className="py-32 px-4 relative overflow-hidden bg-background">
-      <div className="absolute inset-0 mesh-gradient opacity-20" />
-
-      <div className="max-w-7xl mx-auto relative z-10">
+    <section className="py-32 px-4 bg-background">
+      <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-24"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 text-secondary text-xs font-black rounded-xl uppercase tracking-[0.2em] mb-6 shadow-sm">
+          <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 text-secondary text-xs font-semibold rounded-xl uppercase tracking-[0.15em] mb-6">
             <BadgeCheck className="w-4 h-4" />
             {t('gallery.badge') || "Visual Excellence"}
           </span>
-          <h2 className="text-4xl sm:text-6xl font-black text-foreground mb-6 tracking-tighter italic uppercase">
+          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4 tracking-tight">
             {t('gallery.title')}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-medium leading-relaxed">
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             {t('gallery.subtitle')}
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-10 mb-24">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {projects.map((project, idx) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.15 }}
-              whileHover={{ y: -10 }}
+              transition={{ delay: idx * 0.1 }}
               className="group"
             >
               <ComparisonSlider
@@ -161,8 +154,8 @@ export function BeforeAfterGallery({ onCtaClick }: BeforeAfterGalleryProps) {
                 beforeLabel={language === 'de' ? 'Vorher' : 'Before'}
                 afterLabel={language === 'de' ? 'Nachher' : 'After'}
               />
-              <div className="pt-8 px-2">
-                <h3 className="text-2xl font-black text-foreground mb-2 italic uppercase tracking-tighter">
+              <div className="pt-6 px-1">
+                <h3 className="text-xl font-semibold text-foreground mb-1 tracking-tight">
                   {language === 'de' ? project.titleDe : project.titleEn}
                 </h3>
                 <p className="text-muted-foreground font-medium italic">
