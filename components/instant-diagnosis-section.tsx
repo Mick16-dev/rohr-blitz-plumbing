@@ -49,7 +49,7 @@ export function InstantDiagnosisSection() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-10">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 text-primary text-xs font-semibold rounded-full uppercase tracking-[0.15em] mb-4">
-            {language === 'de' ? 'Foto-Diagnose (Prototyp)' : 'Photo diagnosis (prototype)'}
+            {language === 'de' ? 'Foto-Diagnose' : 'Photo diagnosis'}
           </span>
           <h2 className="text-2xl sm:text-3xl font-semibold text-foreground mb-3">
             {language === 'de'
@@ -58,8 +58,8 @@ export function InstantDiagnosisSection() {
           </h2>
           <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
             {language === 'de'
-              ? 'Die Funktion befindet sich noch im Aufbau, hilft uns aber jetzt schon, besser vorbereitet bei Ihnen zu erscheinen.'
-              : 'This feature is still in development, but already helps us arrive better prepared for your job.'}
+              ? 'Mit Ihrem Foto können wir die Situation vorab besser einschätzen, die passenden Teile einpacken und Sie schneller wieder beruhigt duschen lassen.'
+              : 'Your photo helps us understand the situation in advance, pack the right parts and get everything back to normal for you more quickly.'}
           </p>
         </div>
 
