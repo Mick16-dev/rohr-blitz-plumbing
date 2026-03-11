@@ -3,13 +3,10 @@
 import { useLanguage } from '@/app/context/language-context'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
-import { ShieldCheck, Wrench, Droplet, CircleOff, Clock } from 'lucide-react'
-import { cn } from '@/lib/utils'
 
 const jobs = [
   {
     id: 'drain',
-    icon: CircleOff,
     titleEn: 'Blocked toilet or drain',
     titleDe: 'Verstopfte Toilette oder Abfluss',
     fromPrice: 89,
@@ -18,7 +15,6 @@ const jobs = [
   },
   {
     id: 'leak',
-    icon: Droplet,
     titleEn: 'Leak under sink or basin',
     titleDe: 'Leck unter Spüle oder Waschbecken',
     fromPrice: 99,
@@ -27,7 +23,6 @@ const jobs = [
   },
   {
     id: 'emergency',
-    icon: Clock,
     titleEn: 'Emergency evening visit',
     titleDe: 'Notdienst am Abend',
     fromPrice: 149,
@@ -52,8 +47,7 @@ export function PricingSection({ onCtaClick }: PricingSectionProps) {
           viewport={{ once: true }}
           className="text-center mb-24"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary text-xs font-semibold rounded-xl uppercase tracking-[0.15em] mb-6">
-            <ShieldCheck className="w-4 h-4" />
+          <span className="inline-flex px-5 py-2 bg-primary/10 text-primary text-xs font-semibold rounded-full uppercase tracking-[0.2em] mb-6">
             {t('pricing.badge') || 'Prices you can understand'}
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4 tracking-tight">
@@ -73,12 +67,7 @@ export function PricingSection({ onCtaClick }: PricingSectionProps) {
                 key={job.id}
                 className="p-6 rounded-2xl border border-border bg-card text-foreground flex flex-col gap-4"
               >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <job.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-semibold tracking-tight">{title}</h3>
-                </div>
+                <h3 className="text-lg font-semibold tracking-tight">{title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {desc}
                 </p>

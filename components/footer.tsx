@@ -3,7 +3,7 @@
 import { useLanguage } from '@/app/context/language-context'
 import { Button } from '@/components/ui/button'
 import { Magnetic } from '@/components/ui/magnetic'
-import { Phone, Mail, MapPin, ArrowRight, ShieldCheck, Twitter, Linkedin, Instagram } from 'lucide-react'
+import { Phone, Mail, MapPin, ArrowRight, Twitter, Linkedin, Instagram } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
@@ -26,7 +26,6 @@ export function Footer({ onCtaClick }: FooterProps) {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto bg-primary/80 border border-white/10 p-10 lg:p-14 rounded-3xl text-center"
         >
-          <ShieldCheck className="w-10 h-10 text-secondary mx-auto mb-6" />
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 tracking-tight leading-snug">
             {t('footer.lastHeading') || 'Need a plumber today?'}
           </h2>
@@ -98,11 +97,9 @@ export function Footer({ onCtaClick }: FooterProps) {
             <h3 className="text-xs font-black uppercase tracking-[0.3em] text-white/30">Accreditations</h3>
             <div className="grid grid-cols-2 gap-4">
               <div className="p-4 bg-white/5 rounded-2xl border border-white/5 flex flex-col items-center gap-2">
-                <ShieldCheck className="w-6 h-6 text-success" />
                 <span className="text-[8px] font-black uppercase tracking-widest text-center">Certified Meister</span>
               </div>
               <div className="p-4 bg-white/5 rounded-2xl border border-white/5 flex flex-col items-center gap-2">
-                <Phone className="w-6 h-6 text-secondary" />
                 <span className="text-[8px] font-black uppercase tracking-widest text-center">24/7 Emergency</span>
               </div>
             </div>

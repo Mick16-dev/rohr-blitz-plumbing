@@ -2,7 +2,7 @@
 
 import { useLanguage } from '@/app/context/language-context'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Star, CheckCircle, UserCheck, ShieldCheck } from 'lucide-react'
+import { Star } from 'lucide-react'
 
 const testimonials = [
   {
@@ -95,8 +95,7 @@ export function TestimonialsSection() {
           viewport={{ once: true }}
           className="text-center mb-24"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-success/10 text-success text-xs font-semibold rounded-xl uppercase tracking-[0.15em] mb-6">
-            <UserCheck className="w-4 h-4" />
+          <span className="inline-flex px-5 py-2 bg-success/10 text-success text-xs font-semibold rounded-full uppercase tracking-[0.2em] mb-6">
             {language === 'de' ? 'Erfahrungen von Kunden' : 'What customers tell us'}
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 tracking-tight">
@@ -167,13 +166,9 @@ export function TestimonialsSection() {
               </p>
 
               <div className="mt-6 flex items-center gap-3 py-3 border-t border-dashed border-border/60 relative z-10">
-                <div className="w-6 h-6 bg-success/10 rounded-full flex items-center justify-center">
-                  <CheckCircle className="w-3.5 h-3.5 text-success" />
-                </div>
                 <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-success/80">
                   {t('testimonials.verified') || "Verified customer"}
                 </span>
-                <ShieldCheck className="w-4 h-4 text-secondary ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
             </motion.div>
           ))}

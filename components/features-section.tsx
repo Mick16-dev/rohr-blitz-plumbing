@@ -6,13 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useLanguage } from '@/app/context/language-context'
 import { Button } from '@/components/ui/button'
 import { Magnetic } from '@/components/ui/magnetic'
-import {
-  Droplet,
-  Wrench,
-  CheckCircle2,
-  Timer,
-  ArrowRight
-} from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface FeaturesSectionProps {
@@ -22,23 +16,14 @@ interface FeaturesSectionProps {
 const pillars = [
   {
     id: 'expert-diagnosis',
-    icon: Droplet,
-    color: 'text-primary',
-    bg: 'bg-primary/10',
     border: 'border-primary/30'
   },
   {
     id: 'time-cost',
-    icon: Wrench,
-    color: 'text-primary',
-    bg: 'bg-primary/10',
     border: 'border-primary/30'
   },
   {
     id: 'reliability',
-    icon: Timer,
-    color: 'text-primary',
-    bg: 'bg-primary/10',
     border: 'border-primary/30'
   },
 ]
@@ -107,15 +92,6 @@ export function FeaturesSection({ onCtaClick }: FeaturesSectionProps) {
                 activePillar === pillar.id ? pillar.border : "border-border"
               )}
             >
-              <div
-                className={cn(
-                  "w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-xl",
-                  activePillar === pillar.id ? pillar.bg : "bg-muted/50"
-                )}
-              >
-                <pillar.icon className={cn("w-8 h-8", activePillar === pillar.id ? pillar.color : "text-muted-foreground")} />
-              </div>
-
               <h3 className="text-2xl font-black text-foreground mb-4 italic uppercase tracking-tighter">
                 {t(`features.${pillar.id}.title`)}
               </h3>
@@ -148,14 +124,9 @@ export function FeaturesSection({ onCtaClick }: FeaturesSectionProps) {
               {/* Left Side: Detail & Timeline */}
               <div className="space-y-12">
                 <div className="space-y-6">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center">
-                      <Wrench className="w-6 h-6 text-secondary" />
-                    </div>
-                    <h3 className="text-3xl font-black italic uppercase tracking-tighter text-foreground">
-                      {t(`features.${activePillar}.title`)}
-                    </h3>
-                  </div>
+                  <h3 className="text-3xl font-black italic uppercase tracking-tighter text-foreground">
+                    {t(`features.${activePillar}.title`)}
+                  </h3>
                   <p className="text-base text-muted-foreground leading-relaxed">
                     {t(`features.${activePillar}.solution`)}
                   </p>
@@ -170,10 +141,9 @@ export function FeaturesSection({ onCtaClick }: FeaturesSectionProps) {
                       transition={{ delay: i * 0.05 }}
                       className="flex items-center gap-3 bg-muted/40 p-3 rounded-xl border border-border/60"
                     >
-                      <div className="w-8 h-8 rounded-full bg-success/10 flex items-center justify-center shrink-0">
-                        <CheckCircle2 className="w-5 h-5 text-success" />
-                      </div>
-                      <span className="font-bold text-foreground tracking-tight">{t(`features.${activePillar}.benefit${i}`)}</span>
+                      <span className="font-bold text-foreground tracking-tight">
+                        {t(`features.${activePillar}.benefit${i}`)}
+                      </span>
                     </motion.div>
                   ))}
                 </div>
@@ -181,8 +151,7 @@ export function FeaturesSection({ onCtaClick }: FeaturesSectionProps) {
 
               {/* Right Side: Simple steps */}
               <div className="bg-muted rounded-2xl p-6 lg:p-8">
-                <h4 className="text-lg font-semibold text-foreground mb-6 flex items-center gap-2">
-                  <Timer className="w-5 h-5 text-secondary" />
+                <h4 className="text-lg font-semibold text-foreground mb-6">
                   {t('features.howItWorks')}
                 </h4>
 
@@ -197,9 +166,6 @@ export function FeaturesSection({ onCtaClick }: FeaturesSectionProps) {
                       transition={{ delay: idx * 0.15 }}
                       className="flex gap-8 relative z-10"
                     >
-                  <div className="w-10 h-10 rounded-full bg-card flex items-center justify-center shrink-0 border border-border">
-                    <Wrench className="w-5 h-5 text-secondary" />
-                  </div>
                       <div>
                         <p className="text-xs font-semibold text-secondary uppercase tracking-[0.15em] mb-1">
                           Step {step.step}

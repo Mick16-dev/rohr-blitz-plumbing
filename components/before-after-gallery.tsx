@@ -4,7 +4,7 @@ import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { useLanguage } from '@/app/context/language-context'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, BadgeCheck, MoveHorizontal } from 'lucide-react'
+import { ArrowRight, MoveHorizontal } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface ComparisonSliderProps {
@@ -126,8 +126,7 @@ export function BeforeAfterGallery({ onCtaClick }: BeforeAfterGalleryProps) {
           viewport={{ once: true }}
           className="text-center mb-24"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 text-secondary text-xs font-semibold rounded-xl uppercase tracking-[0.15em] mb-6">
-            <BadgeCheck className="w-4 h-4" />
+          <span className="inline-flex px-5 py-2 bg-secondary/10 text-secondary text-xs font-semibold rounded-full uppercase tracking-[0.2em] mb-6">
             {t('gallery.badge') || "Visual Excellence"}
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4 tracking-tight">

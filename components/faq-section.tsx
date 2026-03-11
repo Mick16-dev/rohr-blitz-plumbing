@@ -10,7 +10,6 @@ import {
 import { Button } from '@/components/ui/button'
 import { Magnetic } from '@/components/ui/magnetic'
 import { motion } from 'framer-motion'
-import { HelpCircle, MessageSquare } from 'lucide-react'
 
 const faqs = [
   {
@@ -88,15 +87,13 @@ export function FaqSection() {
           viewport={{ once: true }}
           className="text-center mb-24"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-muted text-muted-foreground text-xs font-semibold rounded-xl uppercase tracking-[0.15em] mb-6">
-            <HelpCircle className="w-4 h-4" />
+          <span className="inline-flex px-5 py-2 bg-muted text-muted-foreground text-xs font-semibold rounded-full uppercase tracking-[0.2em] mb-6">
             {language === 'de' ? 'Gut zu wissen' : 'Good to know'}
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 tracking-tight">
             {t('faq.title')}
           </h2>
-          <div className="flex items-center justify-center gap-3 text-muted-foreground text-xs">
-            <MessageSquare className="w-4 h-4 text-secondary" />
+          <div className="flex items-center justify-center gap-2 text-muted-foreground text-xs">
             {language === 'de'
               ? 'Wenn Sie unsicher sind, rufen Sie lieber einmal mehr an.'
               : 'If you are unsure, it is better to call us once more.'}
@@ -138,7 +135,6 @@ export function FaqSection() {
           viewport={{ once: true }}
           className="mt-16 p-8 rounded-2xl border border-secondary/30 bg-muted flex flex-col items-center text-center"
         >
-          <HelpCircle className="w-8 h-8 text-secondary mb-4" />
           <h3 className="text-2xl font-bold tracking-tight text-foreground mb-4">
             {t('faq.moreHelpTitle') || "Can't find what you need?"}
           </h3>

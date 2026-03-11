@@ -1,41 +1,32 @@
 'use client'
 
 import { useLanguage } from '@/app/context/language-context'
-import { Clock, Award, Shield, BadgeCheck } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const trustItems = [
   {
-    icon: Clock,
     keyEn: 'Average response time in Berlin',
     keyDe: 'Durchschnittliche Reaktionszeit in Berlin',
     stat: '60',
-    unit: 'min',
-    color: 'text-amber-500'
+    unit: 'min'
   },
   {
-    icon: Award,
     keyEn: 'Years of plumbing experience',
     keyDe: 'Jahre Erfahrung im Sanitärbereich',
     stat: '20+',
-    unit: '',
-    color: 'text-secondary'
+    unit: ''
   },
   {
-    icon: Shield,
     keyEn: 'Repairs with warranty',
     keyDe: 'Reparaturen mit Gewährleistung',
     stat: '2',
-    unit: 'yrs',
-    color: 'text-success'
+    unit: 'yrs'
   },
   {
-    icon: BadgeCheck,
     keyEn: 'Emergency jobs per year',
     keyDe: 'Notfälle pro Jahr',
     stat: '500+',
-    unit: '',
-    color: 'text-blue-500'
+    unit: ''
   }
 ]
 
@@ -85,10 +76,6 @@ export function TrustBadges() {
               variants={item}
               className="bg-card rounded-xl p-5 border border-border shadow-sm flex flex-col gap-3"
             >
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <trust.icon className={`w-5 h-5 ${trust.color}`} />
-              </div>
-
               <div className="flex items-baseline gap-1">
                 <span className="text-2xl font-semibold text-foreground tracking-tight">
                   {trust.stat}
