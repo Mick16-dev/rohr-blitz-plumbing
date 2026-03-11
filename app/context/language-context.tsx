@@ -15,6 +15,14 @@ const translations: Record<Language, Record<string, string>> = {
     // Header
     'header.emergency': 'Emergency 24/7',
     'header.logo': 'Rohr-Blitz',
+    'nav.home': 'Overview',
+    'nav.services': 'Services',
+    'nav.pricing': 'Pricing',
+    'nav.about': 'About',
+    'nav.reviews': 'Reviews',
+    'nav.howItWorks': 'How it works',
+    'nav.faq': 'Questions',
+    'nav.contact': 'Contact',
 
     // Hero
     'hero.badge': 'Local emergency plumber',
@@ -168,6 +176,14 @@ const translations: Record<Language, Record<string, string>> = {
     // Header
     'header.emergency': 'Notdienst 24/7',
     'header.logo': 'Rohr-Blitz',
+    'nav.home': 'Überblick',
+    'nav.services': 'Leistungen',
+    'nav.pricing': 'Preise',
+    'nav.about': 'Über uns',
+    'nav.reviews': 'Bewertungen',
+    'nav.howItWorks': 'So läuft es ab',
+    'nav.faq': 'Fragen',
+    'nav.contact': 'Kontakt',
 
     // Hero
     'hero.badge': 'Lokaler Sanitär-Notdienst',

@@ -68,7 +68,7 @@ export function FeaturesSection({ onCtaClick }: FeaturesSectionProps) {
   } as any
 
   return (
-    <section className="py-32 px-4 relative overflow-hidden bg-background">
+    <section id="services" className="py-32 px-4 relative overflow-hidden bg-background">
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}

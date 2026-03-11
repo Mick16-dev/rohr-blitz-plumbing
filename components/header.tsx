@@ -14,6 +14,17 @@ interface HeaderProps {
 export function Header({ onEmergencyClick }: HeaderProps) {
   const { language, setLanguage, t } = useLanguage()
 
+  const navItems = [
+    { href: '#home', label: t('nav.home') },
+    { href: '#services', label: t('nav.services') },
+    { href: '#pricing', label: t('nav.pricing') },
+    { href: '#about', label: t('nav.about') },
+    { href: '#reviews', label: t('nav.reviews') },
+    { href: '#how-it-works', label: t('nav.howItWorks') },
+    { href: '#faq', label: t('nav.faq') },
+    { href: '#contact', label: t('nav.contact') },
+  ]
+
   return (
     <motion.header 
       initial={{ y: -100, opacity: 0 }}
@@ -22,7 +33,7 @@ export function Header({ onEmergencyClick }: HeaderProps) {
       className="glass-header"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 gap-6">
           {/* Logo */}
           <motion.div 
             className="flex items-center gap-4 group cursor-pointer"
@@ -36,8 +47,21 @@ export function Header({ onEmergencyClick }: HeaderProps) {
             </div>
           </motion.div>
 
-          {/* Language Toggle + Emergency CTA */}
+          {/* Navigation + Language Toggle + Emergency CTA */}
           <div className="flex items-center gap-4">
+            {/* Primary navigation (desktop) */}
+            <nav className="hidden lg:flex items-center gap-6 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+              {navItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="hover:text-foreground transition-colors"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+
             {/* Language Toggle */}
             <div className="hidden md:flex items-center bg-muted/50 backdrop-blur-sm rounded-2xl p-1.5 border border-border/50">
               {(['en', 'de'] as const).map((lang) => (

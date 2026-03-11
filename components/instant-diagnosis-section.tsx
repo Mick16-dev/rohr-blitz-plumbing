@@ -45,7 +45,7 @@ export function InstantDiagnosisSection() {
         ]
 
   return (
-    <section className="py-16 px-4 bg-muted/30">
+    <section id="how-it-works" className="py-16 px-4 bg-muted/30">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-10">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 text-primary text-xs font-semibold rounded-full uppercase tracking-[0.15em] mb-4">

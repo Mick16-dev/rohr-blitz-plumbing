@@ -118,7 +118,7 @@ export function BeforeAfterGallery({ onCtaClick }: BeforeAfterGalleryProps) {
   const { language, t } = useLanguage()
 
   return (
-    <section className="py-32 px-4 bg-background">
+    <section id="gallery" className="py-32 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
