@@ -6,9 +6,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  turbopack: {
-    root: 'c:\\Users\\micha\\.antigravity\\v0-plumbing-landing-page',
-  },
+  turbopack: {},
 }
 
 export default nextConfig
