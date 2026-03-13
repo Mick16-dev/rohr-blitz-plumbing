@@ -132,37 +132,35 @@ export function ServicesSection({ onCtaClick }: ServicesSectionProps) {
   const { language, t } = useLanguage()
 
   return (
-    <section id="services" className="py-32 px-4 relative overflow-hidden bg-background">
-      <div className="absolute inset-0 mesh-gradient opacity-20" />
-
+    <section id="services" className="py-24 px-4 relative overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-24"
+          className="text-center mb-16"
         >
-          <h2 className="text-5xl sm:text-7xl font-black text-foreground mb-8 tracking-tighter italic uppercase">
+          <h2 className="text-3xl sm:text-5xl font-bold text-slate-900 mb-6 uppercase tracking-tight">
             {language === 'de' ? 'Unsere Leistungen' : 'Our Services'}
           </h2>
-          <p className="text-xl sm:text-2xl text-muted-foreground max-w-3xl mx-auto font-medium leading-relaxed italic">
-            {language === 'de' ? 'Entdecken Sie unsere meisterhafte Arbeit. Von akuten Notfällen bis hin zu geplanten Modernisierungen.' : 'Discover our master craftsmanship. From acute emergencies to planned modernizations.'}
+          <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto font-medium leading-relaxed">
+            {language === 'de' ? 'Professionelle Sanitär-Lösungen für Notfälle und geplante Modernisierungen.' : 'Professional plumbing solutions for emergencies and planned modernizations.'}
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-12 gap-16 items-start">
-          <div className="lg:col-span-8 space-y-24">
+        <div className="grid lg:grid-cols-12 gap-12 items-start">
+          <div className="lg:col-span-8 space-y-16">
             {services.map((service, idx) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
                 className="group"
               >
-                <div className="flex flex-col md:flex-row gap-12 items-center">
-                  <div className="w-full md:w-1/2">
+                <div className="grid md:grid-cols-2 gap-8 items-center bg-slate-50 p-6 rounded-2xl border border-slate-100 transition-all hover:shadow-md">
+                  <div className="w-full">
                     <ComparisonSlider
                       beforeImage={service.beforeImage}
                       afterImage={service.afterImage}
@@ -170,20 +168,19 @@ export function ServicesSection({ onCtaClick }: ServicesSectionProps) {
                       afterLabel={language === 'de' ? 'Nachher' : 'After'}
                     />
                   </div>
-                  <div className="w-full md:w-1/2 space-y-6">
-                    <h3 className="text-3xl font-black text-foreground italic uppercase tracking-tighter leading-none">
+                  <div className="space-y-4">
+                    <h3 className="text-2xl font-bold text-slate-900 uppercase tracking-tight">
                       {language === 'de' ? service.titleDe : service.titleEn}
                     </h3>
-                    <p className="text-lg text-muted-foreground font-medium italic">
+                    <p className="text-slate-600 font-medium">
                       {language === 'de' ? service.descDe : service.descEn}
                     </p>
-                    <Link 
-                      href={`/services/${service.id}`}
-                      className="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-xs hover:gap-4 transition-all"
-                    >
-                      {language === 'de' ? 'Mehr erfahren' : 'Learn More'}
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
+                    <Button variant="link" asChild className="p-0 h-auto text-slate-900 font-bold uppercase tracking-widest text-[10px] hover:no-underline hover:translate-x-1 transition-transform">
+                      <Link href={`/services/${service.id}`}>
+                        {language === 'de' ? 'Mehr erfahren' : 'Learn More'}
+                        <ArrowRight className="ml-2 w-3 h-3" />
+                      </Link>
+                    </Button>
                   </div>
                 </div>
               </motion.div>
@@ -194,51 +191,47 @@ export function ServicesSection({ onCtaClick }: ServicesSectionProps) {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-4 sticky top-32"
+            className="lg:col-span-4 sticky top-28"
           >
-            <div className="bg-primary rounded-[3rem] p-10 shadow-2xl shadow-primary/20 relative group overflow-hidden">
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-secondary rounded-full blur-3xl opacity-30 group-hover:opacity-60 transition-opacity" />
-
-              <h4 className="text-2xl font-black text-white italic uppercase tracking-widest mb-12 flex items-center gap-4">
-                <Timer className="w-8 h-8 text-secondary" />
+            <div className="bg-slate-900 rounded-2xl p-8 shadow-xl relative overflow-hidden">
+              <h4 className="text-xl font-bold text-white uppercase tracking-wider mb-10 flex items-center gap-3">
+                <Timer className="w-6 h-6 text-slate-400" />
                 {t('features.howItWorks')}
               </h4>
 
-              <div className="space-y-12 relative">
-                <div className="absolute left-6 top-10 bottom-10 w-px bg-white/10" />
+              <div className="space-y-10 relative">
+                <div className="absolute left-5 top-8 bottom-8 w-px bg-slate-800" />
 
                 {diagnosisSteps.map((step, idx) => (
                   <motion.div
                     key={step.step}
-                    initial={{ opacity: 0, x: 20 }}
+                    initial={{ opacity: 0, x: 10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: idx * 0.15 }}
-                    className="flex gap-8 relative z-10"
+                    transition={{ delay: idx * 0.1 }}
+                    className="flex gap-6 relative z-10"
                   >
-                    <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center shrink-0 ring-4 ring-primary border border-white/20 shadow-lg">
-                      <step.icon className="w-5 h-5 text-secondary" />
+                    <div className="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center shrink-0 border border-slate-700">
+                      <step.icon className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <p className="text-[10px] font-black text-secondary uppercase tracking-[0.3em] mb-1">{t('features.step')} {step.step}</p>
-                      <h5 className="text-xl font-bold text-white mb-2 leading-none">{t(`features.masterDeepDive.step${step.step}.title`)}</h5>
-                      <p className="text-sm text-white/60 font-medium leading-relaxed">{t(`features.masterDeepDive.step${step.step}.desc`)}</p>
+                      <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">{t('features.step')} {step.step}</p>
+                      <h5 className="text-lg font-bold text-white mb-1">{t(`features.masterDeepDive.step${step.step}.title`)}</h5>
+                      <p className="text-xs text-slate-400 font-medium leading-relaxed">{t(`features.masterDeepDive.step${step.step}.desc`)}</p>
                     </div>
                   </motion.div>
                 ))}
               </div>
 
-              <Magnetic strength={0.2} className="w-full">
-                <Button
-                  onClick={onCtaClick}
-                  className="w-full mt-16 bg-secondary text-white hover:bg-secondary/90 font-black uppercase tracking-[0.2em] py-8 rounded-2xl text-lg shadow-xl"
-                >
-                  <span className="relative z-10 flex items-center justify-center gap-3">
-                    {t('features.cta')}
-                    <ArrowRight className="w-6 h-6" />
-                  </span>
-                </Button>
-              </Magnetic>
+              <Button
+                onClick={onCtaClick}
+                className="w-full mt-12 bg-white text-slate-900 hover:bg-slate-100 font-bold uppercase tracking-widest py-6 rounded-lg text-sm transition-all"
+              >
+                <span className="flex items-center justify-center gap-2">
+                  {t('features.cta')}
+                  <ArrowRight className="w-4 h-4" />
+                </span>
+              </Button>
             </div>
           </motion.div>
         </div>
