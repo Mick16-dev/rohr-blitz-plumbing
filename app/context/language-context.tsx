@@ -264,6 +264,27 @@ const translations: Record<Language, Record<string, string>> = {
     'form.email': 'E-Mail-Adresse',
     'form.address': 'Adresse',
 
+    // Diagnosis & Workflow
+    'diagnosis.title': 'Systemanalyse Abgeschlossen',
+    'diagnosis.problem': 'Identifiziertes Problem',
+    'diagnosis.action': 'Sofortmaßnahme erforderlich',
+    'diagnosis.tools': 'Benötigte Werkzeuge / Teile',
+    'diagnosis.price': 'Geschätzter Preisrahmen',
+    'diagnosis.book': 'Techniker Jetzt Buchen',
+    
+    'diagnosis.leaking.problem': 'Rohrbruch oder Undichtes Rohr',
+    'diagnosis.leaking.action': 'Hauptwasserhahn sofort abstellen. Eimer unterstellen.',
+    'diagnosis.leaking.tools': 'Rohrzange, Ersatzrohre, Dichtmittel.',
+    'diagnosis.clogged.problem': 'Schwere Verstopfung',
+    'diagnosis.clogged.action': 'Wasserzulauf stoppen. Keine chemischen Reiniger verwenden.',
+    'diagnosis.clogged.tools': 'Motorisierte Rohrreinigungsspirale, Hochdruck-Spülgerät.',
+    'diagnosis.broken.problem': 'Beschädigte Armatur',
+    'diagnosis.broken.action': 'Eckventil unter dem betroffenen Becken abstellen.',
+    'diagnosis.broken.tools': 'Verstellbarer Schraubenschlüssel, Ersatzarmatur.',
+    'diagnosis.installation.problem': 'Neue Sanitärinstallation',
+    'diagnosis.installation.action': 'Bitte Arbeitsbereich für sicheren Zugang freiräumen.',
+    'diagnosis.installation.tools': 'Maßband, Wasserwaage, entsprechende Anschlüsse.',
+
     // Gallery
     'gallery.title': 'Vorher & Nachher',
     'gallery.subtitle': 'Sehen Sie die Qualität unserer Meisterarbeit',
