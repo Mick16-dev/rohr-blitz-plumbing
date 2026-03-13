@@ -61,6 +61,27 @@ const translations: Record<Language, Record<string, string>> = {
     'form.email': 'Email Address',
     'form.address': 'Address',
 
+    // Diagnosis & Workflow
+    'diagnosis.title': 'System Analysis Complete',
+    'diagnosis.problem': 'Identified Problem',
+    'diagnosis.action': 'Immediate Action Required',
+    'diagnosis.tools': 'Required Tools / Parts',
+    'diagnosis.price': 'Estimated Price Range',
+    'diagnosis.book': 'Book Technician Now',
+    
+    'diagnosis.leaking.problem': 'Burst or Leaking Pipe',
+    'diagnosis.leaking.action': 'Shut off main water valve immediately. Place a bucket underneath.',
+    'diagnosis.leaking.tools': 'Pipe wrench, replacement piping, sealant.',
+    'diagnosis.clogged.problem': 'Severe Blockage / Clog',
+    'diagnosis.clogged.action': 'Stop running water. Do not use chemical drain cleaners.',
+    'diagnosis.clogged.tools': 'Motorized plumbing snake, hydro-jetting equipment.',
+    'diagnosis.broken.problem': 'Damaged Fixture',
+    'diagnosis.broken.action': 'Shut off local water valve under the affected fixture.',
+    'diagnosis.broken.tools': 'Adjustable wrench, replacement fixture hardware.',
+    'diagnosis.installation.problem': 'New Component Installation',
+    'diagnosis.installation.action': 'Please clear the surrounding area for secure access.',
+    'diagnosis.installation.tools': 'Measuring tape, level, associated fittings.',
+
     // Gallery
     'gallery.title': 'Before & After Transformations',
     'gallery.subtitle': 'See the quality of our master plumbing work',
