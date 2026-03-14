@@ -143,7 +143,7 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      <Footer />
+      <Footer onCtaClick={() => window.location.href = '/#hero'} />
     </main>
   )
 }
