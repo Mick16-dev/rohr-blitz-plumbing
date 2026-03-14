@@ -8,7 +8,7 @@ This document tracks the progress of transforming the Rohr-Blitz landing page in
 - [x] **Surface Physics**: Added grain texture overlay, mesh gradients, and glassmorphism utilities.
 - [x] **Root Refinement**: Optimized metadata, viewports, and local business SEO foundation.
 
-- [x] **Premium Architecture**: Implemented dedicated /services, /pricing, and /contact pages with human-led design.
+- [x] **Premium Architecture**: Implemented dedicated /services, /pricing, /team, and /contact pages with human-led design.
 - [x] **Advanced Diagnostic Funnel (Hero)**: 
     - [x] Framer Motion transitions between steps.
     - [x] "Master Review" animation for image uploads.
