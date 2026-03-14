@@ -30,18 +30,18 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.title': 'Professional Plumbing Assessment & Emergency Repairs',
     'hero.subtitle': 'Get an instant preliminary estimate and schedule a certified German Master Technician. Direct, transparent, and available 24/7 across major hubs.',
 
-    // Diagnostic Funnel
-    'funnel.step1.title': 'Upload Photo',
-    'funnel.step1.desc': 'Drag & drop or click to upload',
-    'funnel.step1.formats': 'JPG, PNG up to 10MB',
-    'funnel.step2.title': 'Select Issue Type',
-    'funnel.step3.title': 'Severity Level',
-    'funnel.step3.desc': 'How urgent is your issue?',
-    'funnel.step4.title': 'Your Information',
-    'funnel.cta': 'Get Free Estimate',
-    'funnel.success.title': 'Estimate Submitted!',
-    'funnel.success.desc': 'A certified technician is reviewing your case.',
-    'funnel.success.eta': 'Expected callback within',
+    // Precision Quote Engine (Replacement for Diagnosis)
+    'funnel.step1.title': 'Digital Site Survey',
+    'funnel.step1.desc': 'Upload a photo for AI-powered part identification & fixed-price quoting.',
+    'funnel.step1.formats': 'High-resolution JPG or PNG preferred',
+    'funnel.step2.title': 'System Optimization',
+    'funnel.step3.title': 'Access & Complexity',
+    'funnel.step3.desc': 'Is the area easily accessible for a technician?',
+    'funnel.step4.title': 'Verify Specifications',
+    'funnel.cta': 'Generate Precision Quote',
+    'funnel.success.title': 'Precision Quote Locked!',
+    'funnel.success.desc': 'Your fixed-price guarantee is reserved. A technician will arrive with the identified parts.',
+    'funnel.success.eta': 'Guaranteed arrival window',
 
     // Issue Categories
     'issue.leaking': 'Leaking Pipe',
@@ -62,13 +62,15 @@ const translations: Record<Language, Record<string, string>> = {
     'form.email': 'Email Address',
     'form.address': 'Address',
 
-    // Diagnosis & Workflow
-    'diagnosis.title': 'System Analysis Complete',
-    'diagnosis.problem': 'Identified Problem',
-    'diagnosis.action': 'Immediate Action Required',
-    'diagnosis.tools': 'Required Tools / Parts',
-    'diagnosis.price': 'Estimated Price Range',
-    'diagnosis.book': 'Book Technician Now',
+    // Precision Report & Workflow
+    'diagnosis.title': 'Precision Quote Analysis',
+    'diagnosis.problem': 'Identified Hardware/Issue',
+    'diagnosis.action': 'Projected Solution',
+    'diagnosis.tools': 'Parts/Inventory Required',
+    'diagnosis.price': 'Fixed-Price Guarantee',
+    'diagnosis.book': 'Lock-in Quote & Book',
+    'diagnosis.complexity': 'Complexity Rating',
+    'diagnosis.labor': 'Estimated Labor Depth',
     
     'diagnosis.leaking.problem': 'Burst or Leaking Pipe',
     'diagnosis.leaking.action': 'Shut off main water valve immediately. Place a bucket underneath.',
@@ -109,13 +111,13 @@ const translations: Record<Language, Record<string, string>> = {
     'features.solution': 'Our Solution',
 
     // Master Review Pillar
-    'features.expert-diagnosis.title': 'Master Expert Review',
-    'features.expert-diagnosis.tagline': 'Certified issue identification with repair guidance',
-    'features.expert-diagnosis.pain': 'Traditional plumbing inspections require scheduling, waiting for a technician, and paying for diagnostic visits just to understand the problem.',
-    'features.expert-diagnosis.solution': 'Our master technicians review your information, identify the exact issue, and provide a detailed breakdown of required repairs, tools, and parts.',
-    'features.expert-diagnosis.benefit1': 'Identifies 50+ common plumbing issues from a single photo',
-    'features.expert-diagnosis.benefit2': 'Lists exact parts needed (with model numbers) so you can price-compare',
-    'features.expert-diagnosis.benefit3': 'Provides difficulty rating so you know if it\'s DIY or requires a pro',
+    'features.expert-diagnosis.title': 'Precision Site Survey',
+    'features.expert-diagnosis.tagline': 'Digital hardware identification & labor path calculation',
+    'features.expert-diagnosis.pain': 'Most plumbers give "estimates" over the phone that double in price once they see the actual job complexity.',
+    'features.expert-diagnosis.solution': 'Our Vision Engine identifies the exact part and environmental constraints (access, piping material) to lock in a fixed price before arrival.',
+    'features.expert-diagnosis.benefit1': 'Identifies exact model numbers from visual data',
+    'features.expert-diagnosis.benefit2': 'Calculates precise 15-minute labor increments',
+    'features.expert-diagnosis.benefit3': 'Eliminated "Part Trips" - Technician arrives 100% prepared',
 
     // Time & Cost Pillar
     'features.time-cost.title': 'Time & Cost Savings',
@@ -136,18 +138,18 @@ const translations: Record<Language, Record<string, string>> = {
     'features.reliability.benefit3': 'Background-checked, licensed, and fully insured technicians',
 
     // Master Deep Dive
-    'features.howItWorks': 'How It Works',
+    'features.howItWorks': 'The Precision Process',
     'features.learnMore': 'Learn more',
     'features.step': 'Step',
     'features.masterDeepDive.title': 'From Photo to Fixed in 4 Simple Steps',
-    'features.masterDeepDive.step1.title': 'Visual Capture',
-    'features.masterDeepDive.step1.desc': 'Capture a high-fidelity image of the disruption. Our expert technicians process the details of the issue instantly.',
-    'features.masterDeepDive.step2.title': 'Master Validation',
-    'features.masterDeepDive.step2.desc': 'Our Master Technicians validate the diagnostic data, ensuring engineering-grade accuracy and localized compliance.',
-    'features.masterDeepDive.step3.title': 'Detailed Report',
-    'features.masterDeepDive.step3.desc': 'Receive a breakdown of the problem, required parts, estimated repair time, and cost range.',
-    'features.masterDeepDive.step4.title': 'Elite Resolution',
-    'features.masterDeepDive.step4.desc': 'Deploy a certified Master Technician who arrives fully equipped to solve the disruption with surgical precision.',
+    'features.masterDeepDive.step1.title': 'Digital Capture',
+    'features.masterDeepDive.step1.desc': 'Capture a high-fidelity image of the disruption. Our Vision Engine isolates hardware and failure points.',
+    'features.masterDeepDive.step2.title': 'Labor Calculation',
+    'features.masterDeepDive.step2.desc': 'Our engine assesses accessibility and technical depth to calculate exact labor hours required.',
+    'features.masterDeepDive.step3.title': 'Fixed-Price Lock',
+    'features.masterDeepDive.step3.desc': 'Receive a technical brief with identified parts and a guaranteed price. No surprises.',
+    'features.masterDeepDive.step4.title': 'Precision Execution',
+    'features.masterDeepDive.step4.desc': 'A technician is deployed with the exact inventory needed, completing the repair in a single visit.',
 
     // Results Stats
     'features.results.title': 'Real Results, Real Savings',
@@ -187,9 +189,9 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero Additional
     'hero.verifiedExperts': 'Verified Experts',
     'hero.response': '15m Response',
-    'hero.calculate': 'Start Technical Review',
-    'hero.masterDiagnostic': 'Master Technician Review',
-    'hero.analyzing': 'Expert is reviewing details...',
+    'hero.calculate': 'Start Digital Survey',
+    'hero.masterDiagnostic': 'Precision Site Survey',
+    'hero.analyzing': 'Analyzing visual data & part matching...',
     'hero.encrypted': 'Encrypted',
     'hero.gdpr': 'GDPR Ready',
     'hero.masterEstimate': 'Master Estimate',
@@ -256,18 +258,18 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.title': 'Professionelle Sanitär-Analyse & Notfall-Reparatur',
     'hero.subtitle': 'Erhalten Sie eine sofortige Kostenschätzung und buchen Sie einen zertifizierten deutschen Handwerksmeister. Direkt, transparent und 24/7 verfügbar.',
 
-    // Diagnostic Funnel
-    'funnel.step1.title': 'Foto hochladen',
-    'funnel.step1.desc': 'Ziehen & ablegen oder klicken',
-    'funnel.step1.formats': 'JPG, PNG bis 10MB',
-    'funnel.step2.title': 'Problemart wählen',
-    'funnel.step3.title': 'Dringlichkeitsstufe',
-    'funnel.step3.desc': 'Wie dringend ist Ihr Problem?',
-    'funnel.step4.title': 'Ihre Daten',
-    'funnel.cta': 'Kostenlose Schätzung',
-    'funnel.success.title': 'Anfrage gesendet!',
-    'funnel.success.desc': 'Ein zertifizierter Techniker prüft Ihren Fall.',
-    'funnel.success.eta': 'Erwarteter Rückruf innerhalb',
+    // Precision Quote Engine (Ersatz für Diagnose)
+    'funnel.step1.title': 'Digitaler Standort-Check',
+    'funnel.step1.desc': 'Laden Sie ein Foto hoch für die KI-Teileidentifikation & Festpreis-Angebot.',
+    'funnel.step1.formats': 'Hochauflösende JPG oder PNG bevorzugt',
+    'funnel.step2.title': 'System-Optimierung',
+    'funnel.step3.title': 'Zugang & Komplexität',
+    'funnel.step3.desc': 'Ist der Arbeitsbereich leicht zugänglich?',
+    'funnel.step4.title': 'Spezifikationen prüfen',
+    'funnel.cta': 'Präzisions-Angebot erstellen',
+    'funnel.success.title': 'Angebot Gesichert!',
+    'funnel.success.desc': 'Ihre Festpreis-Garantie ist reserviert. Ein Techniker wird mit den identifizierten Teilen eintreffen.',
+    'funnel.success.eta': 'Garantiertes Zeitfenster',
 
     // Issue Categories
     'issue.leaking': 'Undichtes Rohr',
@@ -288,13 +290,15 @@ const translations: Record<Language, Record<string, string>> = {
     'form.email': 'E-Mail-Adresse',
     'form.address': 'Adresse',
 
-    // Diagnosis & Workflow
-    'diagnosis.title': 'Systemanalyse Abgeschlossen',
-    'diagnosis.problem': 'Identifiziertes Problem',
-    'diagnosis.action': 'Sofortmaßnahme erforderlich',
-    'diagnosis.tools': 'Benötigte Werkzeuge / Teile',
-    'diagnosis.price': 'Geschätzter Preisrahmen',
-    'diagnosis.book': 'Techniker Jetzt Buchen',
+    // Precision Report & Workflow
+    'diagnosis.title': 'Präzisions-Angebotsanalyse',
+    'diagnosis.problem': 'Identifizierte Hardware/Problem',
+    'diagnosis.action': 'Projektierte Lösung',
+    'diagnosis.tools': 'Benötigte Teile/Inventar',
+    'diagnosis.price': 'Festpreis-Garantie',
+    'diagnosis.book': 'Angebot sichern & Buchen',
+    'diagnosis.complexity': 'Komplexitätsgrad',
+    'diagnosis.labor': 'Geschätzter Arbeitsaufwand',
     
     'diagnosis.leaking.problem': 'Rohrbruch oder Undichtes Rohr',
     'diagnosis.leaking.action': 'Hauptwasserhahn sofort abstellen. Eimer unterstellen.',
@@ -335,13 +339,13 @@ const translations: Record<Language, Record<string, string>> = {
     'features.solution': 'Unsere Lösung',
 
     // Master Review Pillar
-    'features.expert-diagnosis.title': 'Meisterliche Prüfung',
-    'features.expert-diagnosis.tagline': 'Zertifizierte Problemerkennung mit Reparaturanleitung',
-    'features.expert-diagnosis.pain': 'Herkömmliche Inspektionen erfordern Terminvereinbarung, Warten und Bezahlung nur für die Diagnose.',
-    'features.expert-diagnosis.solution': 'Unsere Meister prüfen Ihre Angaben, identifizieren das Problem und liefern eine detaillierte Aufschlüsselung der Reparatur.',
-    'features.expert-diagnosis.benefit1': 'Erkennt 50+ häufige Sanitärprobleme aus einem Foto',
-    'features.expert-diagnosis.benefit2': 'Listet benötigte Teile mit Modellnummern zum Preisvergleich',
-    'features.expert-diagnosis.benefit3': 'Gibt Schwierigkeitsgrad an: DIY oder Profi erforderlich',
+    'features.expert-diagnosis.title': 'Präzisions-Standort-Check',
+    'features.expert-diagnosis.tagline': 'Digitale Hardware-Erkennung & Arbeitsweg-Berechnung',
+    'features.expert-diagnosis.pain': 'Die meisten Klempner geben am Telefon Schätzungen ab, die sich verdoppeln, sobald sie die tatsächliche Komplexität sehen.',
+    'features.expert-diagnosis.solution': 'Unsere Vision-Engine identifiziert das exakte Teil und die Umgebungsvorgaben (Zugang, Material), um einen Festpreis vor der Ankunft zu garantieren.',
+    'features.expert-diagnosis.benefit1': 'Identifiziert exakte Modellnummern aus Bilddaten',
+    'features.expert-diagnosis.benefit2': 'Berechnet präzise 15-Minuten-Arbeitsintervalle',
+    'features.expert-diagnosis.benefit3': 'Keine Zweitanfahrten - Techniker kommt 100% vorbereitet',
 
     // Time & Cost Pillar
     'features.time-cost.title': 'Zeit- & Kostenersparnis',
@@ -362,18 +366,18 @@ const translations: Record<Language, Record<string, string>> = {
     'features.reliability.benefit3': 'Überprüfte, lizenzierte und vollversicherte Techniker',
 
     // Master Deep Dive
-    'features.howItWorks': 'So funktioniert\'s',
+    'features.howItWorks': 'Der Präzisions-Prozess',
     'features.learnMore': 'Mehr erfahren',
     'features.step': 'Schritt',
-    'features.masterDeepDive.title': 'Vom Foto zur Reparatur in 4 Schritten',
-    'features.masterDeepDive.step1.title': 'Foto machen',
-    'features.masterDeepDive.step1.desc': 'Fotografieren Sie das Leck, die Verstopfung oder die beschädigte Armatur. Funktioniert mit jedem Smartphone.',
-    'features.masterDeepDive.step2.title': 'Meister-Analyse',
-    'features.masterDeepDive.step2.desc': 'Unsere Meister analysieren das Bild, vergleichen mit tausenden Fällen und identifizieren Problem und Schweregrad.',
-    'features.masterDeepDive.step3.title': 'Detaillierter Bericht',
-    'features.masterDeepDive.step3.desc': 'Erhalten Sie eine Aufschlüsselung des Problems, benötigte Teile, geschätzte Reparaturzeit und Kostenspanne.',
-    'features.masterDeepDive.step4.title': 'Reparatur',
-    'features.masterDeepDive.step4.desc': 'Buchen Sie einen Techniker, der mit den richtigen Werkzeugen ankommt, oder reparieren Sie selbst mit unserer Anleitung.',
+    'features.masterDeepDive.title': 'Vom Foto zum Fix in 4 Schritten',
+    'features.masterDeepDive.step1.title': 'Digitale Aufnahme',
+    'features.masterDeepDive.step1.desc': 'Machen Sie ein Foto der Störung. Unsere Vision-Engine isoliert Hardware und Fehlerstellen.',
+    'features.masterDeepDive.step2.title': 'Aufwands-Check',
+    'features.masterDeepDive.step2.desc': 'Unsere Engine bewertet Zugänglichkeit und technische Tiefe, um die exakten Arbeitsstunden zu berechnen.',
+    'features.masterDeepDive.step3.title': 'Festpreis-Garantie',
+    'features.masterDeepDive.step3.desc': 'Erhalten Sie ein technisches Angebot mit identifizierten Teilen und Festpreis. Keine Überraschungen.',
+    'features.masterDeepDive.step4.title': 'Präzisions-Reparatur',
+    'features.masterDeepDive.step4.desc': 'Ein Techniker wird mit dem exakten Inventar entsandt und schließt die Reparatur in einem Besuch ab.',
 
     // Results Stats
     'features.results.title': 'Echte Ergebnisse, echte Ersparnisse',
@@ -413,9 +417,9 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero Additional
     'hero.verifiedExperts': 'Verifizierte Experten',
     'hero.response': '15 Min. Reaktionszeit',
-    'hero.calculate': 'Technische Prüfung starten',
-    'hero.masterDiagnostic': 'Meisterliche Prüfung',
-    'hero.analyzing': 'Experte prüft Details...',
+    'hero.calculate': 'Check starten',
+    'hero.masterDiagnostic': 'Präzisions-Standort-Check',
+    'hero.analyzing': 'Analysiere Bilddaten & Teile...',
     'hero.encrypted': 'Verschlüsselt',
     'hero.gdpr': 'DSGVO-konform',
     'hero.masterEstimate': 'Meister-Schätzung',
