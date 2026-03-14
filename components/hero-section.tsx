@@ -113,8 +113,19 @@ export function HeroSection({ onCtaClick }: { onCtaClick: () => void }) {
   } as any
 
   return (
-    <section className="relative pt-24 pb-12 px-4 min-h-[50vh] flex items-center justify-center bg-slate-50 border-b border-slate-200 overflow-hidden">
-      <div className="absolute inset-0 opacity-5 pointer-events-none blueprint-grid" />
+    <section className="relative pt-24 pb-12 px-4 min-h-[50vh] flex items-center justify-center bg-slate-900 border-b border-slate-200 overflow-hidden">
+      {/* Background Image with Overlay for Visual Context */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/hero-bg.png" 
+          alt="Technical Site Survey Context" 
+          className="w-full h-full object-cover opacity-40 mix-blend-luminosity scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/60 to-slate-900/90" />
+        <div className="absolute inset-0 backdrop-blur-[2px]" />
+      </div>
+
+      <div className="absolute inset-0 opacity-10 pointer-events-none blueprint-grid z-0" />
 
       <div className="max-w-6xl mx-auto relative z-10 text-center space-y-12">
         <motion.div
@@ -123,11 +134,11 @@ export function HeroSection({ onCtaClick }: { onCtaClick: () => void }) {
           transition={{ duration: 0.5 }}
           className="space-y-6"
         >
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight tracking-tight max-w-4xl mx-auto uppercase">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight max-w-4xl mx-auto uppercase">
             {t('hero.title')}
           </h1>
 
-          <p className="text-lg sm:text-2xl text-slate-600 max-w-2xl mx-auto font-medium leading-relaxed">
+          <p className="text-lg sm:text-2xl text-slate-300 max-w-2xl mx-auto font-medium leading-relaxed">
             {t('hero.subtitle')}
           </p>
 
@@ -135,7 +146,7 @@ export function HeroSection({ onCtaClick }: { onCtaClick: () => void }) {
             <Button
               onClick={() => setIsFunnelOpen(true)}
               size="lg"
-              className="bg-slate-900 text-white hover:bg-slate-800 font-bold uppercase tracking-wider h-14 px-8 rounded-lg text-base shadow-lg transition-all"
+              className="bg-white text-slate-900 hover:bg-slate-100 font-bold uppercase tracking-wider h-14 px-8 rounded-lg text-base shadow-2xl transition-all hover:scale-105 active:scale-95"
             >
               <span className="flex items-center gap-2">
                 {t('hero.calculate')}
