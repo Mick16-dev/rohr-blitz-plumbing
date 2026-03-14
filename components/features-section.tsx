@@ -14,7 +14,6 @@ import {
   FileText,
   Timer,
   ArrowRight,
-  Shield,
   Search
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
