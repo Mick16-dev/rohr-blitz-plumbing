@@ -38,10 +38,11 @@ export function Header({ onEmergencyClick }: HeaderProps) {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1 mx-4">
             {[
-              { key: 'nav.overview', href: '/' },
-              { key: 'nav.services', href: '/services' },
-              { key: 'nav.pricing', href: '/pricing' },
-              { key: 'nav.contact', href: '/contact' }
+              { key: 'nav.overview', name: t('nav.overview'), href: '/' },
+              { key: 'nav.services', name: t('nav.services'), href: '/services' },
+              { key: 'nav.pricing', name: t('nav.pricing'), href: '/pricing' },
+              { key: 'nav.team', name: t('nav.team'), href: '/team' },
+              { key: 'nav.contact', name: t('nav.contact'), href: '/contact' }
             ].map((item) => (
               <a
                 key={item.key}
